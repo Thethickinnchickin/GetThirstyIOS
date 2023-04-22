@@ -1,0 +1,6 @@
+framework module Pods_GetThirsty_GetThirstyUITests {
+  umbrella header "Pods-GetThirsty-GetThirstyUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

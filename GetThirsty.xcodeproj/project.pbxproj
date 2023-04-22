@@ -1,0 +1,796 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0080D059876CF512FC848BD8 /* Pods_GetThirsty_GetThirstyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99BEBE8797C6187A6732BA39 /* Pods_GetThirsty_GetThirstyUITests.framework */; };
+		8D1C2F0529EA7728004A15D6 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1C2F0429EA7728004A15D6 /* UserService.swift */; };
+		8D617DC129ED0BFF0028DFCC /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D617DC029ED0BFF0028DFCC /* KeyChainService.swift */; };
+		8D617DC329EDB6510028DFCC /* WaterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D617DC229EDB6500028DFCC /* WaterService.swift */; };
+		8D617DC629EFDD510028DFCC /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D617DC529EFDD510028DFCC /* Token.swift */; };
+		8D617DDB29F232210028DFCC /* Righteous-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D617DDA29F232200028DFCC /* Righteous-Regular.ttf */; };
+		8D617DDF29F24B940028DFCC /* DancingScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D617DDE29F24B940028DFCC /* DancingScript-Regular.ttf */; };
+		8DBFFFB829E8E6A900ABACE2 /* GetThirstyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBFFFB729E8E6A900ABACE2 /* GetThirstyApp.swift */; };
+		8DBFFFBA29E8E6A900ABACE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBFFFB929E8E6A900ABACE2 /* ContentView.swift */; };
+		8DBFFFBC29E8E6AC00ABACE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DBFFFBB29E8E6AC00ABACE2 /* Assets.xcassets */; };
+		8DBFFFBF29E8E6AC00ABACE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DBFFFBE29E8E6AC00ABACE2 /* Preview Assets.xcassets */; };
+		8DBFFFC929E8E6AC00ABACE2 /* GetThirstyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBFFFC829E8E6AC00ABACE2 /* GetThirstyTests.swift */; };
+		8DBFFFD329E8E6AC00ABACE2 /* GetThirstyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBFFFD229E8E6AC00ABACE2 /* GetThirstyUITests.swift */; };
+		8DBFFFD529E8E6AC00ABACE2 /* GetThirstyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBFFFD429E8E6AC00ABACE2 /* GetThirstyUITestsLaunchTests.swift */; };
+		8DBFFFE329EA17D500ABACE2 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBFFFE229EA17D500ABACE2 /* Login.swift */; };
+		8DBFFFE529EA1A7900ABACE2 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBFFFE429EA1A7900ABACE2 /* Register.swift */; };
+		8E28E587A72F1265E66692A3 /* Pods_GetThirstyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F72789DD38EFF4E3A837BF2C /* Pods_GetThirstyTests.framework */; };
+		D4B457FA9CEC0D86DD1BCC50 /* Pods_GetThirsty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A17EA8AE12724AE39E1425 /* Pods_GetThirsty.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8DBFFFC529E8E6AC00ABACE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DBFFFAC29E8E6A900ABACE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DBFFFB329E8E6A900ABACE2;
+			remoteInfo = GetThirsty;
+		};
+		8DBFFFCF29E8E6AC00ABACE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DBFFFAC29E8E6A900ABACE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DBFFFB329E8E6A900ABACE2;
+			remoteInfo = GetThirsty;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		626326256213B026E599C507 /* Pods-GetThirsty-GetThirstyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetThirsty-GetThirstyUITests.release.xcconfig"; path = "Target Support Files/Pods-GetThirsty-GetThirstyUITests/Pods-GetThirsty-GetThirstyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		686946C0158E31AD7FE8F2B7 /* Pods-GetThirsty-GetThirstyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetThirsty-GetThirstyUITests.debug.xcconfig"; path = "Target Support Files/Pods-GetThirsty-GetThirstyUITests/Pods-GetThirsty-GetThirstyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6AFF7F06C8D189C30F3C03F3 /* Pods-GetThirsty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetThirsty.debug.xcconfig"; path = "Target Support Files/Pods-GetThirsty/Pods-GetThirsty.debug.xcconfig"; sourceTree = "<group>"; };
+		8D1C2F0429EA7728004A15D6 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		8D617DC029ED0BFF0028DFCC /* KeyChainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
+		8D617DC229EDB6500028DFCC /* WaterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterService.swift; sourceTree = "<group>"; };
+		8D617DC529EFDD510028DFCC /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		8D617DCD29F223F80028DFCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D617DDA29F232200028DFCC /* Righteous-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Righteous-Regular.ttf"; sourceTree = "<group>"; };
+		8D617DDE29F24B940028DFCC /* DancingScript-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-Regular.ttf"; sourceTree = "<group>"; };
+		8DBFFFB429E8E6A900ABACE2 /* GetThirsty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetThirsty.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DBFFFB729E8E6A900ABACE2 /* GetThirstyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetThirstyApp.swift; sourceTree = "<group>"; };
+		8DBFFFB929E8E6A900ABACE2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8DBFFFBB29E8E6AC00ABACE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8DBFFFBE29E8E6AC00ABACE2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8DBFFFC429E8E6AC00ABACE2 /* GetThirstyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetThirstyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DBFFFC829E8E6AC00ABACE2 /* GetThirstyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetThirstyTests.swift; sourceTree = "<group>"; };
+		8DBFFFCE29E8E6AC00ABACE2 /* GetThirstyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetThirstyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DBFFFD229E8E6AC00ABACE2 /* GetThirstyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetThirstyUITests.swift; sourceTree = "<group>"; };
+		8DBFFFD429E8E6AC00ABACE2 /* GetThirstyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetThirstyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8DBFFFE229EA17D500ABACE2 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		8DBFFFE429EA1A7900ABACE2 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		99BEBE8797C6187A6732BA39 /* Pods_GetThirsty_GetThirstyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetThirsty_GetThirstyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB6013E7C244593D20A3FAFB /* Pods-GetThirstyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetThirstyTests.debug.xcconfig"; path = "Target Support Files/Pods-GetThirstyTests/Pods-GetThirstyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C4A501E81DA1DD3A50DA409B /* Pods-GetThirsty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetThirsty.release.xcconfig"; path = "Target Support Files/Pods-GetThirsty/Pods-GetThirsty.release.xcconfig"; sourceTree = "<group>"; };
+		E4A17EA8AE12724AE39E1425 /* Pods_GetThirsty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetThirsty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F72789DD38EFF4E3A837BF2C /* Pods_GetThirstyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetThirstyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F956B9AC36C82FC8B740DB65 /* Pods-GetThirstyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetThirstyTests.release.xcconfig"; path = "Target Support Files/Pods-GetThirstyTests/Pods-GetThirstyTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DBFFFB129E8E6A900ABACE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4B457FA9CEC0D86DD1BCC50 /* Pods_GetThirsty.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DBFFFC129E8E6AC00ABACE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E28E587A72F1265E66692A3 /* Pods_GetThirstyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DBFFFCB29E8E6AC00ABACE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0080D059876CF512FC848BD8 /* Pods_GetThirsty_GetThirstyUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3114DD398EF9207D400BBAC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4A17EA8AE12724AE39E1425 /* Pods_GetThirsty.framework */,
+				99BEBE8797C6187A6732BA39 /* Pods_GetThirsty_GetThirstyUITests.framework */,
+				F72789DD38EFF4E3A837BF2C /* Pods_GetThirstyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D1C2F0329EA770C004A15D6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8D1C2F0429EA7728004A15D6 /* UserService.swift */,
+				8D617DC029ED0BFF0028DFCC /* KeyChainService.swift */,
+				8D617DC229EDB6500028DFCC /* WaterService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8D617DC429EFDD3E0028DFCC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8D617DC529EFDD510028DFCC /* Token.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8DBFFFAB29E8E6A900ABACE2 = {
+			isa = PBXGroup;
+			children = (
+				8DBFFFB629E8E6A900ABACE2 /* GetThirsty */,
+				8DBFFFC729E8E6AC00ABACE2 /* GetThirstyTests */,
+				8DBFFFD129E8E6AC00ABACE2 /* GetThirstyUITests */,
+				8DBFFFB529E8E6A900ABACE2 /* Products */,
+				DEFDD8F1DFF7E52B7E9E1C4E /* Pods */,
+				3114DD398EF9207D400BBAC9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8DBFFFB529E8E6A900ABACE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DBFFFB429E8E6A900ABACE2 /* GetThirsty.app */,
+				8DBFFFC429E8E6AC00ABACE2 /* GetThirstyTests.xctest */,
+				8DBFFFCE29E8E6AC00ABACE2 /* GetThirstyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8DBFFFB629E8E6A900ABACE2 /* GetThirsty */ = {
+			isa = PBXGroup;
+			children = (
+				8D617DDE29F24B940028DFCC /* DancingScript-Regular.ttf */,
+				8D617DDA29F232200028DFCC /* Righteous-Regular.ttf */,
+				8D617DCD29F223F80028DFCC /* Info.plist */,
+				8D617DC429EFDD3E0028DFCC /* Utils */,
+				8D1C2F0329EA770C004A15D6 /* Services */,
+				8DBFFFE129EA167300ABACE2 /* Views */,
+				8DBFFFB729E8E6A900ABACE2 /* GetThirstyApp.swift */,
+				8DBFFFB929E8E6A900ABACE2 /* ContentView.swift */,
+				8DBFFFBB29E8E6AC00ABACE2 /* Assets.xcassets */,
+				8DBFFFBD29E8E6AC00ABACE2 /* Preview Content */,
+			);
+			path = GetThirsty;
+			sourceTree = "<group>";
+		};
+		8DBFFFBD29E8E6AC00ABACE2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8DBFFFBE29E8E6AC00ABACE2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8DBFFFC729E8E6AC00ABACE2 /* GetThirstyTests */ = {
+			isa = PBXGroup;
+			children = (
+				8DBFFFC829E8E6AC00ABACE2 /* GetThirstyTests.swift */,
+			);
+			path = GetThirstyTests;
+			sourceTree = "<group>";
+		};
+		8DBFFFD129E8E6AC00ABACE2 /* GetThirstyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8DBFFFD229E8E6AC00ABACE2 /* GetThirstyUITests.swift */,
+				8DBFFFD429E8E6AC00ABACE2 /* GetThirstyUITestsLaunchTests.swift */,
+			);
+			path = GetThirstyUITests;
+			sourceTree = "<group>";
+		};
+		8DBFFFE129EA167300ABACE2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8DBFFFE229EA17D500ABACE2 /* Login.swift */,
+				8DBFFFE429EA1A7900ABACE2 /* Register.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DEFDD8F1DFF7E52B7E9E1C4E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6AFF7F06C8D189C30F3C03F3 /* Pods-GetThirsty.debug.xcconfig */,
+				C4A501E81DA1DD3A50DA409B /* Pods-GetThirsty.release.xcconfig */,
+				686946C0158E31AD7FE8F2B7 /* Pods-GetThirsty-GetThirstyUITests.debug.xcconfig */,
+				626326256213B026E599C507 /* Pods-GetThirsty-GetThirstyUITests.release.xcconfig */,
+				BB6013E7C244593D20A3FAFB /* Pods-GetThirstyTests.debug.xcconfig */,
+				F956B9AC36C82FC8B740DB65 /* Pods-GetThirstyTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DBFFFB329E8E6A900ABACE2 /* GetThirsty */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DBFFFD829E8E6AC00ABACE2 /* Build configuration list for PBXNativeTarget "GetThirsty" */;
+			buildPhases = (
+				25781378D2EFA045BDB05E01 /* [CP] Check Pods Manifest.lock */,
+				8DBFFFB029E8E6A900ABACE2 /* Sources */,
+				8DBFFFB129E8E6A900ABACE2 /* Frameworks */,
+				8DBFFFB229E8E6A900ABACE2 /* Resources */,
+				987ECB5CD41958FF95DD86B1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GetThirsty;
+			productName = GetThirsty;
+			productReference = 8DBFFFB429E8E6A900ABACE2 /* GetThirsty.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8DBFFFC329E8E6AC00ABACE2 /* GetThirstyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DBFFFDB29E8E6AC00ABACE2 /* Build configuration list for PBXNativeTarget "GetThirstyTests" */;
+			buildPhases = (
+				F457DA291192FE7F4D0612A5 /* [CP] Check Pods Manifest.lock */,
+				8DBFFFC029E8E6AC00ABACE2 /* Sources */,
+				8DBFFFC129E8E6AC00ABACE2 /* Frameworks */,
+				8DBFFFC229E8E6AC00ABACE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8DBFFFC629E8E6AC00ABACE2 /* PBXTargetDependency */,
+			);
+			name = GetThirstyTests;
+			productName = GetThirstyTests;
+			productReference = 8DBFFFC429E8E6AC00ABACE2 /* GetThirstyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8DBFFFCD29E8E6AC00ABACE2 /* GetThirstyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DBFFFDE29E8E6AC00ABACE2 /* Build configuration list for PBXNativeTarget "GetThirstyUITests" */;
+			buildPhases = (
+				9F7D54EDA17449EDB7987EE2 /* [CP] Check Pods Manifest.lock */,
+				8DBFFFCA29E8E6AC00ABACE2 /* Sources */,
+				8DBFFFCB29E8E6AC00ABACE2 /* Frameworks */,
+				8DBFFFCC29E8E6AC00ABACE2 /* Resources */,
+				AFAF2CEFCE4673A0F19EC15A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8DBFFFD029E8E6AC00ABACE2 /* PBXTargetDependency */,
+			);
+			name = GetThirstyUITests;
+			productName = GetThirstyUITests;
+			productReference = 8DBFFFCE29E8E6AC00ABACE2 /* GetThirstyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8DBFFFAC29E8E6A900ABACE2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					8DBFFFB329E8E6A900ABACE2 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					8DBFFFC329E8E6AC00ABACE2 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 8DBFFFB329E8E6A900ABACE2;
+					};
+					8DBFFFCD29E8E6AC00ABACE2 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 8DBFFFB329E8E6A900ABACE2;
+					};
+				};
+			};
+			buildConfigurationList = 8DBFFFAF29E8E6A900ABACE2 /* Build configuration list for PBXProject "GetThirsty" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8DBFFFAB29E8E6A900ABACE2;
+			productRefGroup = 8DBFFFB529E8E6A900ABACE2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DBFFFB329E8E6A900ABACE2 /* GetThirsty */,
+				8DBFFFC329E8E6AC00ABACE2 /* GetThirstyTests */,
+				8DBFFFCD29E8E6AC00ABACE2 /* GetThirstyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8DBFFFB229E8E6A900ABACE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DBFFFBF29E8E6AC00ABACE2 /* Preview Assets.xcassets in Resources */,
+				8D617DDB29F232210028DFCC /* Righteous-Regular.ttf in Resources */,
+				8DBFFFBC29E8E6AC00ABACE2 /* Assets.xcassets in Resources */,
+				8D617DDF29F24B940028DFCC /* DancingScript-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DBFFFC229E8E6AC00ABACE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DBFFFCC29E8E6AC00ABACE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25781378D2EFA045BDB05E01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GetThirsty-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		987ECB5CD41958FF95DD86B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GetThirsty/Pods-GetThirsty-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GetThirsty/Pods-GetThirsty-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GetThirsty/Pods-GetThirsty-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F7D54EDA17449EDB7987EE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GetThirsty-GetThirstyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFAF2CEFCE4673A0F19EC15A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GetThirsty-GetThirstyUITests/Pods-GetThirsty-GetThirstyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GetThirsty-GetThirstyUITests/Pods-GetThirsty-GetThirstyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GetThirsty-GetThirstyUITests/Pods-GetThirsty-GetThirstyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F457DA291192FE7F4D0612A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GetThirstyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DBFFFB029E8E6A900ABACE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DBFFFE329EA17D500ABACE2 /* Login.swift in Sources */,
+				8D1C2F0529EA7728004A15D6 /* UserService.swift in Sources */,
+				8DBFFFBA29E8E6A900ABACE2 /* ContentView.swift in Sources */,
+				8D617DC129ED0BFF0028DFCC /* KeyChainService.swift in Sources */,
+				8DBFFFE529EA1A7900ABACE2 /* Register.swift in Sources */,
+				8DBFFFB829E8E6A900ABACE2 /* GetThirstyApp.swift in Sources */,
+				8D617DC329EDB6510028DFCC /* WaterService.swift in Sources */,
+				8D617DC629EFDD510028DFCC /* Token.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DBFFFC029E8E6AC00ABACE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DBFFFC929E8E6AC00ABACE2 /* GetThirstyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DBFFFCA29E8E6AC00ABACE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DBFFFD329E8E6AC00ABACE2 /* GetThirstyUITests.swift in Sources */,
+				8DBFFFD529E8E6AC00ABACE2 /* GetThirstyUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8DBFFFC629E8E6AC00ABACE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DBFFFB329E8E6A900ABACE2 /* GetThirsty */;
+			targetProxy = 8DBFFFC529E8E6AC00ABACE2 /* PBXContainerItemProxy */;
+		};
+		8DBFFFD029E8E6AC00ABACE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DBFFFB329E8E6A900ABACE2 /* GetThirsty */;
+			targetProxy = 8DBFFFCF29E8E6AC00ABACE2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8DBFFFD629E8E6AC00ABACE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8DBFFFD729E8E6AC00ABACE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8DBFFFD929E8E6AC00ABACE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AFF7F06C8D189C30F3C03F3 /* Pods-GetThirsty.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GetThirsty/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GetThirsty/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = matt.reiley.GetThirsty;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8DBFFFDA29E8E6AC00ABACE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4A501E81DA1DD3A50DA409B /* Pods-GetThirsty.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GetThirsty/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GetThirsty/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = matt.reiley.GetThirsty;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8DBFFFDC29E8E6AC00ABACE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB6013E7C244593D20A3FAFB /* Pods-GetThirstyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = matt.reiley.GetThirstyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GetThirsty.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GetThirsty";
+			};
+			name = Debug;
+		};
+		8DBFFFDD29E8E6AC00ABACE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F956B9AC36C82FC8B740DB65 /* Pods-GetThirstyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = matt.reiley.GetThirstyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GetThirsty.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GetThirsty";
+			};
+			name = Release;
+		};
+		8DBFFFDF29E8E6AC00ABACE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 686946C0158E31AD7FE8F2B7 /* Pods-GetThirsty-GetThirstyUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = matt.reiley.GetThirstyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GetThirsty;
+			};
+			name = Debug;
+		};
+		8DBFFFE029E8E6AC00ABACE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 626326256213B026E599C507 /* Pods-GetThirsty-GetThirstyUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = matt.reiley.GetThirstyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GetThirsty;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8DBFFFAF29E8E6A900ABACE2 /* Build configuration list for PBXProject "GetThirsty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DBFFFD629E8E6AC00ABACE2 /* Debug */,
+				8DBFFFD729E8E6AC00ABACE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DBFFFD829E8E6AC00ABACE2 /* Build configuration list for PBXNativeTarget "GetThirsty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DBFFFD929E8E6AC00ABACE2 /* Debug */,
+				8DBFFFDA29E8E6AC00ABACE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DBFFFDB29E8E6AC00ABACE2 /* Build configuration list for PBXNativeTarget "GetThirstyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DBFFFDC29E8E6AC00ABACE2 /* Debug */,
+				8DBFFFDD29E8E6AC00ABACE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DBFFFDE29E8E6AC00ABACE2 /* Build configuration list for PBXNativeTarget "GetThirstyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DBFFFDF29E8E6AC00ABACE2 /* Debug */,
+				8DBFFFE029E8E6AC00ABACE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8DBFFFAC29E8E6A900ABACE2 /* Project object */;
+}

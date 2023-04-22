@@ -1,0 +1,1006 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04F3FC8BACED4F33F7809BB0FAA1DF3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		08404A0579FA2AE6917ACB56EEFDB48C /* pycabcrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = F3443B3D1247BFCD7EBBD0D6143088BE /* pycabcrypt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AA03BC0791ADF6F3A949A6624B5BDFC /* sha2.h in Headers */ = {isa = PBXBuildFile; fileRef = 0187A830690253625BE26A24C5511476 /* sha2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F26311B8DB53E8C8652B6387F515B84 /* Pods-GetThirsty-GetThirstyUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9997A90A64CEEBC967B522250CF406 /* Pods-GetThirsty-GetThirstyUITests-dummy.m */; };
+		1ED468390DF82292F48F39755F92F712 /* timingsafe_bcmp.c in Sources */ = {isa = PBXBuildFile; fileRef = 4051BBD7DA38C4097C5012CB0D283012 /* timingsafe_bcmp.c */; };
+		317AB0D04D2C4E81862DADD070CA457B /* Pods-GetThirstyTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 160106762949D6DB028C38B4EDFF840F /* Pods-GetThirstyTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39B935DCFA255DB59369D0DE507B4F8E /* PerfectBCrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03E7867614F10EAC8F27811DF143745 /* PerfectBCrypt.swift */; };
+		54FCA5FA98168B66D0EA5017071281E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		557B38243D4285D190570F6CD56E19B7 /* bcrypt_pbkdf.c in Sources */ = {isa = PBXBuildFile; fileRef = 27F3BA8A70BAF9FFA311C44083A4E643 /* bcrypt_pbkdf.c */; };
+		698FEB6ACBFFB9E733D3663C6764B094 /* sha2.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B0F1F7BF931274159ECC506635A19E2 /* sha2.c */; };
+		71F9EAB60647CE7D61CC2D885C6B4875 /* module.modulemap in Sources */ = {isa = PBXBuildFile; fileRef = B2C1C4796D33833BFAAB68BE3E4B2DEC /* module.modulemap */; };
+		8C4AEBC6063104BC71FF7679DB10E327 /* BCrypt-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCE7323B341719D6274A077EA0A6BF1 /* BCrypt-dummy.m */; };
+		9493E087DCE621920F3DB3460715CF64 /* Pods-GetThirsty-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B0F0916610D500D23629B6D21707D9C /* Pods-GetThirsty-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9BD9F230713AB547F25378D2E555BDB9 /* blf.h in Headers */ = {isa = PBXBuildFile; fileRef = 10B047A37C71FCEF66E986F0DE86D14F /* blf.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D02E95B355B1F0BCC5F8473A63B9AF8 /* Pods-GetThirstyTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2561DA56C76B70E7472F1BDC12860979 /* Pods-GetThirstyTests-dummy.m */; };
+		AB9757441FE0B25254BD9B238743C0AD /* portable_endian.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D209D7DC15C0CA5F9AEE980D87CE244 /* portable_endian.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBABFE459B33B436E7A2A38F836137B1 /* Pods-GetThirsty-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECA56BCCC191ACDE3F82E37045B37F2 /* Pods-GetThirsty-dummy.m */; };
+		CA6F666F3D0E633C36B40F2F027899C2 /* blf.c in Sources */ = {isa = PBXBuildFile; fileRef = 43C526CF1FD8E3E51AB85A248BABEC76 /* blf.c */; };
+		E0A9332569145DB79487A860BBD5D419 /* BCrypt-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 07B6472DAD38258709911BE4C26572E5 /* BCrypt-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE38472F89A7A5D588AAADE5FB69EC4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		EF23E1F33CBF6464F0F47AED29203D02 /* bcrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = B6BD8B4B69742D0FC465EE592023495C /* bcrypt.c */; };
+		F0BBAEB3D3641B194527E85C607A2D26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		F2A0AB27BE196CD1BFD214864B3D444B /* Pods-GetThirsty-GetThirstyUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE3A7691AEC12DD2DEC13890EC65EB2 /* Pods-GetThirsty-GetThirstyUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		083C45A80C347F4A79CE31DA1291A2DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C03340631D53B1119803C2F8E3506D4A;
+			remoteInfo = BCrypt;
+		};
+		4B4D8B8467729AEC2EE465B25D9FF7A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C03340631D53B1119803C2F8E3506D4A;
+			remoteInfo = BCrypt;
+		};
+		A65BAA5A533B57517C46487C76440A72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 224715DF697383DADF544E3EB76F8E25;
+			remoteInfo = "Pods-GetThirsty";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0187A830690253625BE26A24C5511476 /* sha2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sha2.h; path = BCrypt/Classes/bcryptc/include/sha2.h; sourceTree = "<group>"; };
+		07B6472DAD38258709911BE4C26572E5 /* BCrypt-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BCrypt-umbrella.h"; sourceTree = "<group>"; };
+		0803B36A9C99E624C5B456A20383710F /* Pods-GetThirsty-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GetThirsty-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0909CBBF335E02E5185E853893A2FD4B /* Pods-GetThirsty-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GetThirsty-frameworks.sh"; sourceTree = "<group>"; };
+		10B047A37C71FCEF66E986F0DE86D14F /* blf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = blf.h; path = BCrypt/Classes/bcryptc/include/blf.h; sourceTree = "<group>"; };
+		14BCAA9D064FD9371AD5D3EB65C4AE98 /* BCrypt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BCrypt.release.xcconfig; sourceTree = "<group>"; };
+		160106762949D6DB028C38B4EDFF840F /* Pods-GetThirstyTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GetThirstyTests-umbrella.h"; sourceTree = "<group>"; };
+		1B0F0916610D500D23629B6D21707D9C /* Pods-GetThirsty-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GetThirsty-umbrella.h"; sourceTree = "<group>"; };
+		2561DA56C76B70E7472F1BDC12860979 /* Pods-GetThirstyTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GetThirstyTests-dummy.m"; sourceTree = "<group>"; };
+		26075EAB5F50368D050790EC0A8B3910 /* Pods-GetThirsty */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GetThirsty"; path = Pods_GetThirsty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		266137C4780D5E07C1A67C9767AF6536 /* Pods-GetThirstyTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GetThirstyTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		27F3BA8A70BAF9FFA311C44083A4E643 /* bcrypt_pbkdf.c */ = {isa = PBXFileReference; includeInIndex = 1; name = bcrypt_pbkdf.c; path = BCrypt/Classes/bcryptc/bcrypt_pbkdf.c; sourceTree = "<group>"; };
+		2ECA56BCCC191ACDE3F82E37045B37F2 /* Pods-GetThirsty-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GetThirsty-dummy.m"; sourceTree = "<group>"; };
+		3924A6A371EBD69ECA1E40BA7564CAB9 /* Pods-GetThirsty-GetThirstyUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GetThirsty-GetThirstyUITests-frameworks.sh"; sourceTree = "<group>"; };
+		3FE3A7691AEC12DD2DEC13890EC65EB2 /* Pods-GetThirsty-GetThirstyUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GetThirsty-GetThirstyUITests-umbrella.h"; sourceTree = "<group>"; };
+		4051BBD7DA38C4097C5012CB0D283012 /* timingsafe_bcmp.c */ = {isa = PBXFileReference; includeInIndex = 1; name = timingsafe_bcmp.c; path = BCrypt/Classes/bcryptc/timingsafe_bcmp.c; sourceTree = "<group>"; };
+		43C526CF1FD8E3E51AB85A248BABEC76 /* blf.c */ = {isa = PBXFileReference; includeInIndex = 1; name = blf.c; path = BCrypt/Classes/bcryptc/blf.c; sourceTree = "<group>"; };
+		46B89DD23922DBD95516221721788B01 /* Pods-GetThirsty-GetThirstyUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GetThirsty-GetThirstyUITests"; path = Pods_GetThirsty_GetThirstyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AA2733FAFF3003A6A5CBA318237BA0B /* Pods-GetThirsty-GetThirstyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GetThirsty-GetThirstyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4D209D7DC15C0CA5F9AEE980D87CE244 /* portable_endian.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = portable_endian.h; path = BCrypt/Classes/bcryptc/include/portable_endian.h; sourceTree = "<group>"; };
+		4F4EE013DDEDE15FDD70DA0E823759E6 /* Pods-GetThirstyTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GetThirstyTests.modulemap"; sourceTree = "<group>"; };
+		52CB98A925FCCC0D2AD45BC401242030 /* Pods-GetThirsty-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GetThirsty-acknowledgements.plist"; sourceTree = "<group>"; };
+		577BCEB41B01E10774820A71D5F5516E /* Pods-GetThirsty-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GetThirsty-Info.plist"; sourceTree = "<group>"; };
+		677B8E5995B53D2246FEE914664761DB /* Pods-GetThirstyTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GetThirstyTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		6B0F1F7BF931274159ECC506635A19E2 /* sha2.c */ = {isa = PBXFileReference; includeInIndex = 1; name = sha2.c; path = BCrypt/Classes/bcryptc/sha2.c; sourceTree = "<group>"; };
+		6D9997A90A64CEEBC967B522250CF406 /* Pods-GetThirsty-GetThirstyUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GetThirsty-GetThirstyUITests-dummy.m"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FCE7323B341719D6274A077EA0A6BF1 /* BCrypt-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BCrypt-dummy.m"; sourceTree = "<group>"; };
+		A13CA0539493D900116009C2ECE143E6 /* Pods-GetThirstyTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GetThirstyTests-Info.plist"; sourceTree = "<group>"; };
+		A413B98892949D83A9F564A71F1EB958 /* BCrypt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BCrypt.debug.xcconfig; sourceTree = "<group>"; };
+		AC16A11C75E932B7BCD0B6D8916D188D /* Pods-GetThirsty-GetThirstyUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GetThirsty-GetThirstyUITests.modulemap"; sourceTree = "<group>"; };
+		B2C1C4796D33833BFAAB68BE3E4B2DEC /* module.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = module.modulemap; path = BCrypt/Classes/bcryptc/include/module.modulemap; sourceTree = "<group>"; };
+		B4AF40AD4EC6E3C1218EC6E33C9685E5 /* BCrypt.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BCrypt.modulemap; sourceTree = "<group>"; };
+		B6BD8B4B69742D0FC465EE592023495C /* bcrypt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = bcrypt.c; path = BCrypt/Classes/bcryptc/bcrypt.c; sourceTree = "<group>"; };
+		B742E3EEFF2A355D1E0EC3FCB2BACCAF /* Pods-GetThirsty-GetThirstyUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GetThirsty-GetThirstyUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B78EDC706AF73297C3D2CC8FE153D96F /* BCrypt-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BCrypt-Info.plist"; sourceTree = "<group>"; };
+		BD63D935BB3EBEA73856BBE74E8D5459 /* BCrypt */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BCrypt; path = BCrypt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE3748D20DCB8E243FA6433304DB0E23 /* Pods-GetThirsty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GetThirsty.release.xcconfig"; sourceTree = "<group>"; };
+		BF66290CFE61DF685E99F07428050725 /* Pods-GetThirstyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GetThirstyTests.release.xcconfig"; sourceTree = "<group>"; };
+		C03E7867614F10EAC8F27811DF143745 /* PerfectBCrypt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PerfectBCrypt.swift; path = BCrypt/Classes/PerfectBCrypt/PerfectBCrypt.swift; sourceTree = "<group>"; };
+		C18F4E73A8E86877D17FF97799EF987D /* Pods-GetThirstyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GetThirstyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CACD8C5CA8BE8E77AD604EC79EE6E62B /* Pods-GetThirsty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GetThirsty.debug.xcconfig"; sourceTree = "<group>"; };
+		D0C6882484F0FF8D2667EFCE18524631 /* Pods-GetThirstyTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GetThirstyTests"; path = Pods_GetThirstyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2E068DD254C0C207A9DD98C96A53B0F /* Pods-GetThirsty-GetThirstyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GetThirsty-GetThirstyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DE72D031BB3411B936A357151BD442FD /* Pods-GetThirsty-GetThirstyUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GetThirsty-GetThirstyUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		E3C11130351C4E94E1487CF207A6BAAA /* Pods-GetThirsty.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GetThirsty.modulemap"; sourceTree = "<group>"; };
+		F05C2840CAA306BF25AB8D7B938C7B60 /* Pods-GetThirsty-GetThirstyUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GetThirsty-GetThirstyUITests-Info.plist"; sourceTree = "<group>"; };
+		F3443B3D1247BFCD7EBBD0D6143088BE /* pycabcrypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pycabcrypt.h; path = BCrypt/Classes/bcryptc/include/pycabcrypt.h; sourceTree = "<group>"; };
+		FC3C5D4B96D4B682E64A86F5B869D19C /* BCrypt-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BCrypt-prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17786D397BB25DFAEAC95E882DB05AAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE38472F89A7A5D588AAADE5FB69EC4D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91C65D7BAC25D222F1F3FE5DF69EF683 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0BBAEB3D3641B194527E85C607A2D26 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6A34A6590AEB2791F65C491FC389D0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54FCA5FA98168B66D0EA5017071281E3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9847B50ACB64AAA5011CF68C6683C53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04F3FC8BACED4F33F7809BB0FAA1DF3C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1173D292125DDC786F03D38E6ADE64AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C1400366F49A7F157D3056C080D15B7 /* BCrypt */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		39E38335B0F86926F0149342F0B0FE05 /* Pods-GetThirsty-GetThirstyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AC16A11C75E932B7BCD0B6D8916D188D /* Pods-GetThirsty-GetThirstyUITests.modulemap */,
+				B742E3EEFF2A355D1E0EC3FCB2BACCAF /* Pods-GetThirsty-GetThirstyUITests-acknowledgements.markdown */,
+				DE72D031BB3411B936A357151BD442FD /* Pods-GetThirsty-GetThirstyUITests-acknowledgements.plist */,
+				6D9997A90A64CEEBC967B522250CF406 /* Pods-GetThirsty-GetThirstyUITests-dummy.m */,
+				3924A6A371EBD69ECA1E40BA7564CAB9 /* Pods-GetThirsty-GetThirstyUITests-frameworks.sh */,
+				F05C2840CAA306BF25AB8D7B938C7B60 /* Pods-GetThirsty-GetThirstyUITests-Info.plist */,
+				3FE3A7691AEC12DD2DEC13890EC65EB2 /* Pods-GetThirsty-GetThirstyUITests-umbrella.h */,
+				4AA2733FAFF3003A6A5CBA318237BA0B /* Pods-GetThirsty-GetThirstyUITests.debug.xcconfig */,
+				D2E068DD254C0C207A9DD98C96A53B0F /* Pods-GetThirsty-GetThirstyUITests.release.xcconfig */,
+			);
+			name = "Pods-GetThirsty-GetThirstyUITests";
+			path = "Target Support Files/Pods-GetThirsty-GetThirstyUITests";
+			sourceTree = "<group>";
+		};
+		4EC1CEDCC2F016A37FAAF69D0B028654 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FCFABEB999AAA64D20283EA5F1A41EC4 /* Pods-GetThirsty */,
+				39E38335B0F86926F0149342F0B0FE05 /* Pods-GetThirsty-GetThirstyUITests */,
+				A96607181107EF4BF8D7CECB6C8143D1 /* Pods-GetThirstyTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7C1400366F49A7F157D3056C080D15B7 /* BCrypt */ = {
+			isa = PBXGroup;
+			children = (
+				B6BD8B4B69742D0FC465EE592023495C /* bcrypt.c */,
+				27F3BA8A70BAF9FFA311C44083A4E643 /* bcrypt_pbkdf.c */,
+				43C526CF1FD8E3E51AB85A248BABEC76 /* blf.c */,
+				10B047A37C71FCEF66E986F0DE86D14F /* blf.h */,
+				B2C1C4796D33833BFAAB68BE3E4B2DEC /* module.modulemap */,
+				C03E7867614F10EAC8F27811DF143745 /* PerfectBCrypt.swift */,
+				4D209D7DC15C0CA5F9AEE980D87CE244 /* portable_endian.h */,
+				F3443B3D1247BFCD7EBBD0D6143088BE /* pycabcrypt.h */,
+				6B0F1F7BF931274159ECC506635A19E2 /* sha2.c */,
+				0187A830690253625BE26A24C5511476 /* sha2.h */,
+				4051BBD7DA38C4097C5012CB0D283012 /* timingsafe_bcmp.c */,
+				CC8F996242D980914F3BE566182EAB29 /* Support Files */,
+			);
+			name = BCrypt;
+			path = BCrypt;
+			sourceTree = "<group>";
+		};
+		86002C7F90F525A130A4ACE12197DEA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD63D935BB3EBEA73856BBE74E8D5459 /* BCrypt */,
+				26075EAB5F50368D050790EC0A8B3910 /* Pods-GetThirsty */,
+				46B89DD23922DBD95516221721788B01 /* Pods-GetThirsty-GetThirstyUITests */,
+				D0C6882484F0FF8D2667EFCE18524631 /* Pods-GetThirstyTests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A96607181107EF4BF8D7CECB6C8143D1 /* Pods-GetThirstyTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F4EE013DDEDE15FDD70DA0E823759E6 /* Pods-GetThirstyTests.modulemap */,
+				266137C4780D5E07C1A67C9767AF6536 /* Pods-GetThirstyTests-acknowledgements.markdown */,
+				677B8E5995B53D2246FEE914664761DB /* Pods-GetThirstyTests-acknowledgements.plist */,
+				2561DA56C76B70E7472F1BDC12860979 /* Pods-GetThirstyTests-dummy.m */,
+				A13CA0539493D900116009C2ECE143E6 /* Pods-GetThirstyTests-Info.plist */,
+				160106762949D6DB028C38B4EDFF840F /* Pods-GetThirstyTests-umbrella.h */,
+				C18F4E73A8E86877D17FF97799EF987D /* Pods-GetThirstyTests.debug.xcconfig */,
+				BF66290CFE61DF685E99F07428050725 /* Pods-GetThirstyTests.release.xcconfig */,
+			);
+			name = "Pods-GetThirstyTests";
+			path = "Target Support Files/Pods-GetThirstyTests";
+			sourceTree = "<group>";
+		};
+		CC8F996242D980914F3BE566182EAB29 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B4AF40AD4EC6E3C1218EC6E33C9685E5 /* BCrypt.modulemap */,
+				9FCE7323B341719D6274A077EA0A6BF1 /* BCrypt-dummy.m */,
+				B78EDC706AF73297C3D2CC8FE153D96F /* BCrypt-Info.plist */,
+				FC3C5D4B96D4B682E64A86F5B869D19C /* BCrypt-prefix.pch */,
+				07B6472DAD38258709911BE4C26572E5 /* BCrypt-umbrella.h */,
+				A413B98892949D83A9F564A71F1EB958 /* BCrypt.debug.xcconfig */,
+				14BCAA9D064FD9371AD5D3EB65C4AE98 /* BCrypt.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BCrypt";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				1173D292125DDC786F03D38E6ADE64AE /* Pods */,
+				86002C7F90F525A130A4ACE12197DEA8 /* Products */,
+				4EC1CEDCC2F016A37FAAF69D0B028654 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FCFABEB999AAA64D20283EA5F1A41EC4 /* Pods-GetThirsty */ = {
+			isa = PBXGroup;
+			children = (
+				E3C11130351C4E94E1487CF207A6BAAA /* Pods-GetThirsty.modulemap */,
+				0803B36A9C99E624C5B456A20383710F /* Pods-GetThirsty-acknowledgements.markdown */,
+				52CB98A925FCCC0D2AD45BC401242030 /* Pods-GetThirsty-acknowledgements.plist */,
+				2ECA56BCCC191ACDE3F82E37045B37F2 /* Pods-GetThirsty-dummy.m */,
+				0909CBBF335E02E5185E853893A2FD4B /* Pods-GetThirsty-frameworks.sh */,
+				577BCEB41B01E10774820A71D5F5516E /* Pods-GetThirsty-Info.plist */,
+				1B0F0916610D500D23629B6D21707D9C /* Pods-GetThirsty-umbrella.h */,
+				CACD8C5CA8BE8E77AD604EC79EE6E62B /* Pods-GetThirsty.debug.xcconfig */,
+				BE3748D20DCB8E243FA6433304DB0E23 /* Pods-GetThirsty.release.xcconfig */,
+			);
+			name = "Pods-GetThirsty";
+			path = "Target Support Files/Pods-GetThirsty";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		825548C3CBBFFD547DE65C28C4ED0E02 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				317AB0D04D2C4E81862DADD070CA457B /* Pods-GetThirstyTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88D4CCCAB15D997880AC3D31D2546C5E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2A0AB27BE196CD1BFD214864B3D444B /* Pods-GetThirsty-GetThirstyUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F29624F9F71A38F30EC3C8C62A69933 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9493E087DCE621920F3DB3460715CF64 /* Pods-GetThirsty-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAE5A400348482F6BB9F56EFF386141E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0A9332569145DB79487A860BBD5D419 /* BCrypt-umbrella.h in Headers */,
+				9BD9F230713AB547F25378D2E555BDB9 /* blf.h in Headers */,
+				AB9757441FE0B25254BD9B238743C0AD /* portable_endian.h in Headers */,
+				08404A0579FA2AE6917ACB56EEFDB48C /* pycabcrypt.h in Headers */,
+				0AA03BC0791ADF6F3A949A6624B5BDFC /* sha2.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		224715DF697383DADF544E3EB76F8E25 /* Pods-GetThirsty */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE214EEA1FDC4EF08DB580966018F43E /* Build configuration list for PBXNativeTarget "Pods-GetThirsty" */;
+			buildPhases = (
+				8F29624F9F71A38F30EC3C8C62A69933 /* Headers */,
+				690044237416C14DBCC44F138EF45D1C /* Sources */,
+				17786D397BB25DFAEAC95E882DB05AAA /* Frameworks */,
+				1E4AD7512BDA6EA915CC4B107AA7D84E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3700655B46DE0EA4A136E0FF362EB9B5 /* PBXTargetDependency */,
+			);
+			name = "Pods-GetThirsty";
+			productName = Pods_GetThirsty;
+			productReference = 26075EAB5F50368D050790EC0A8B3910 /* Pods-GetThirsty */;
+			productType = "com.apple.product-type.framework";
+		};
+		30E6D564AC609D613279FD7BB21F9B55 /* Pods-GetThirstyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7D73A70B36F515B019A1A6B8EEA75D0 /* Build configuration list for PBXNativeTarget "Pods-GetThirstyTests" */;
+			buildPhases = (
+				825548C3CBBFFD547DE65C28C4ED0E02 /* Headers */,
+				874D4BAB8BC7AC4D5E7FA77017AA72EF /* Sources */,
+				91C65D7BAC25D222F1F3FE5DF69EF683 /* Frameworks */,
+				833767EC6077DA81D6094988CF903DB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90AC612C983011D84356800EBC3F9451 /* PBXTargetDependency */,
+			);
+			name = "Pods-GetThirstyTests";
+			productName = Pods_GetThirstyTests;
+			productReference = D0C6882484F0FF8D2667EFCE18524631 /* Pods-GetThirstyTests */;
+			productType = "com.apple.product-type.framework";
+		};
+		C03340631D53B1119803C2F8E3506D4A /* BCrypt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC0692AB0A8C5444BED2B8342857DDBD /* Build configuration list for PBXNativeTarget "BCrypt" */;
+			buildPhases = (
+				EAE5A400348482F6BB9F56EFF386141E /* Headers */,
+				5BAB6B6F77B5B5E0E124C43064E51370 /* Sources */,
+				D6A34A6590AEB2791F65C491FC389D0E /* Frameworks */,
+				961A471BC80F17C796B2786E1B211014 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BCrypt;
+			productName = BCrypt;
+			productReference = BD63D935BB3EBEA73856BBE74E8D5459 /* BCrypt */;
+			productType = "com.apple.product-type.framework";
+		};
+		D21BC4CACA52E996BD5AF8593BEC2EBE /* Pods-GetThirsty-GetThirstyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17C6F52D222CD91C6789DA9A78F32EDF /* Build configuration list for PBXNativeTarget "Pods-GetThirsty-GetThirstyUITests" */;
+			buildPhases = (
+				88D4CCCAB15D997880AC3D31D2546C5E /* Headers */,
+				92C84563F71113812F6F4181CEC8E242 /* Sources */,
+				D9847B50ACB64AAA5011CF68C6683C53 /* Frameworks */,
+				30A0184935CB0204316CAE8E75FC3C4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB6D3496C45359748DCB3FF7CA0E59E1 /* PBXTargetDependency */,
+			);
+			name = "Pods-GetThirsty-GetThirstyUITests";
+			productName = Pods_GetThirsty_GetThirstyUITests;
+			productReference = 46B89DD23922DBD95516221721788B01 /* Pods-GetThirsty-GetThirstyUITests */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 86002C7F90F525A130A4ACE12197DEA8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C03340631D53B1119803C2F8E3506D4A /* BCrypt */,
+				224715DF697383DADF544E3EB76F8E25 /* Pods-GetThirsty */,
+				D21BC4CACA52E996BD5AF8593BEC2EBE /* Pods-GetThirsty-GetThirstyUITests */,
+				30E6D564AC609D613279FD7BB21F9B55 /* Pods-GetThirstyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E4AD7512BDA6EA915CC4B107AA7D84E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30A0184935CB0204316CAE8E75FC3C4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		833767EC6077DA81D6094988CF903DB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		961A471BC80F17C796B2786E1B211014 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5BAB6B6F77B5B5E0E124C43064E51370 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF23E1F33CBF6464F0F47AED29203D02 /* bcrypt.c in Sources */,
+				8C4AEBC6063104BC71FF7679DB10E327 /* BCrypt-dummy.m in Sources */,
+				557B38243D4285D190570F6CD56E19B7 /* bcrypt_pbkdf.c in Sources */,
+				CA6F666F3D0E633C36B40F2F027899C2 /* blf.c in Sources */,
+				71F9EAB60647CE7D61CC2D885C6B4875 /* module.modulemap in Sources */,
+				39B935DCFA255DB59369D0DE507B4F8E /* PerfectBCrypt.swift in Sources */,
+				698FEB6ACBFFB9E733D3663C6764B094 /* sha2.c in Sources */,
+				1ED468390DF82292F48F39755F92F712 /* timingsafe_bcmp.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		690044237416C14DBCC44F138EF45D1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBABFE459B33B436E7A2A38F836137B1 /* Pods-GetThirsty-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		874D4BAB8BC7AC4D5E7FA77017AA72EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D02E95B355B1F0BCC5F8473A63B9AF8 /* Pods-GetThirstyTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92C84563F71113812F6F4181CEC8E242 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F26311B8DB53E8C8652B6387F515B84 /* Pods-GetThirsty-GetThirstyUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3700655B46DE0EA4A136E0FF362EB9B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BCrypt;
+			target = C03340631D53B1119803C2F8E3506D4A /* BCrypt */;
+			targetProxy = 4B4D8B8467729AEC2EE465B25D9FF7A6 /* PBXContainerItemProxy */;
+		};
+		90AC612C983011D84356800EBC3F9451 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-GetThirsty";
+			target = 224715DF697383DADF544E3EB76F8E25 /* Pods-GetThirsty */;
+			targetProxy = A65BAA5A533B57517C46487C76440A72 /* PBXContainerItemProxy */;
+		};
+		CB6D3496C45359748DCB3FF7CA0E59E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BCrypt;
+			target = C03340631D53B1119803C2F8E3506D4A /* BCrypt */;
+			targetProxy = 083C45A80C347F4A79CE31DA1291A2DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2B20288C415206E7847E840A80ECD478 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CACD8C5CA8BE8E77AD604EC79EE6E62B /* Pods-GetThirsty.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GetThirsty/Pods-GetThirsty-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GetThirsty/Pods-GetThirsty.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3BD3AF1C5B8A632C411528A0AA4B03FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2E068DD254C0C207A9DD98C96A53B0F /* Pods-GetThirsty-GetThirstyUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GetThirsty-GetThirstyUITests/Pods-GetThirsty-GetThirstyUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GetThirsty-GetThirstyUITests/Pods-GetThirsty-GetThirstyUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		446BA1B9A1F1F2F95D04E5F82EB1B0F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		59F4039011810F13BFD7A50432291B1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF66290CFE61DF685E99F07428050725 /* Pods-GetThirstyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GetThirstyTests/Pods-GetThirstyTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GetThirstyTests/Pods-GetThirstyTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5D47E2EFAC6FAC81A782D9BFD8736F53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		740688B08A56163F47F93FA6EF6739E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A413B98892949D83A9F564A71F1EB958 /* BCrypt.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BCrypt/BCrypt-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BCrypt/BCrypt-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BCrypt/BCrypt.modulemap";
+				PRODUCT_MODULE_NAME = BCrypt;
+				PRODUCT_NAME = BCrypt;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		74473D29DA1CC9040DD08675D2058FCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AA2733FAFF3003A6A5CBA318237BA0B /* Pods-GetThirsty-GetThirstyUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GetThirsty-GetThirstyUITests/Pods-GetThirsty-GetThirstyUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GetThirsty-GetThirstyUITests/Pods-GetThirsty-GetThirstyUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9755D3D4348110393AB053F202256C80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14BCAA9D064FD9371AD5D3EB65C4AE98 /* BCrypt.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BCrypt/BCrypt-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BCrypt/BCrypt-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BCrypt/BCrypt.modulemap";
+				PRODUCT_MODULE_NAME = BCrypt;
+				PRODUCT_NAME = BCrypt;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A5B3CB0F863B733DC7BCB683DA4185E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C18F4E73A8E86877D17FF97799EF987D /* Pods-GetThirstyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GetThirstyTests/Pods-GetThirstyTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GetThirstyTests/Pods-GetThirstyTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B4D3D0B2DDC60A932D50A3586E933C5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE3748D20DCB8E243FA6433304DB0E23 /* Pods-GetThirsty.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GetThirsty/Pods-GetThirsty-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GetThirsty/Pods-GetThirsty.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17C6F52D222CD91C6789DA9A78F32EDF /* Build configuration list for PBXNativeTarget "Pods-GetThirsty-GetThirstyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74473D29DA1CC9040DD08675D2058FCA /* Debug */,
+				3BD3AF1C5B8A632C411528A0AA4B03FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				446BA1B9A1F1F2F95D04E5F82EB1B0F4 /* Debug */,
+				5D47E2EFAC6FAC81A782D9BFD8736F53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC0692AB0A8C5444BED2B8342857DDBD /* Build configuration list for PBXNativeTarget "BCrypt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				740688B08A56163F47F93FA6EF6739E2 /* Debug */,
+				9755D3D4348110393AB053F202256C80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7D73A70B36F515B019A1A6B8EEA75D0 /* Build configuration list for PBXNativeTarget "Pods-GetThirstyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5B3CB0F863B733DC7BCB683DA4185E8 /* Debug */,
+				59F4039011810F13BFD7A50432291B1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE214EEA1FDC4EF08DB580966018F43E /* Build configuration list for PBXNativeTarget "Pods-GetThirsty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B20288C415206E7847E840A80ECD478 /* Debug */,
+				B4D3D0B2DDC60A932D50A3586E933C5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
