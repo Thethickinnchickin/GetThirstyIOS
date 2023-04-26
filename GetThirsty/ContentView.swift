@@ -24,6 +24,8 @@ struct ContentView: View {
     @State private var intake : Date = WaterService().getLastIntake()
     @State private var isLoading : Bool = true
     @State private var plusImg : String = "plus.app.fill"
+
+
     
     
     @State var flag = false
@@ -47,6 +49,8 @@ struct ContentView: View {
 
                 }
             } else {
+  
+                
                 if response.userLive {
                     VStack {
                         // Top bar with the date
@@ -57,10 +61,10 @@ struct ContentView: View {
                             Spacer()
                         }
                         .padding()
-                        .foregroundColor(.black)
+                        .foregroundColor(.white)
                         .background(
                             LinearGradient(
-                                gradient: Gradient(colors: [Color.white, Color.blue]),
+                                gradient: Gradient(colors: [Color(red: 0.4627, green: 0.8392, blue: 1.0), Color.blue]),
                                 startPoint: .topLeading,
                                 endPoint: .bottomTrailing
                             )
@@ -68,135 +72,302 @@ struct ContentView: View {
                         
                        
                     }
-
-                    
-
-
-                    Button("Reset") {
-                        WaterService().getRid()
-                        self.response = WaterService().getWaterNon()
-            
-                    }
-                    Text("GetThirsty").font(.custom("DancingScript-Regular", size: 46)).foregroundColor(Color.blue)
-
-                    
                     VStack {
-                        HStack {
-                            Text("Add Caffeine:")
-                            Text("\(caffeineAdd)").foregroundColor(Color.blue)
-                            Text("mg")
-
-                        }
-                        .font(.custom("Righteous-Regular", size: 35))
-                            .fontWeight(.bold)
-                            .padding()
-
                         
-                        HStack {
-                            Button(action: {
-                                caffeineAdd -= 1
-                            }) {
-                                Image(systemName: "minus.rectangle")
-                                    .foregroundColor(.blue)
-                                    .font(.largeTitle)
-                            }
-                            .padding()
-                            
-                            Button(action: {
-                                caffeineAdd += 1
-                            }) {
-                                Image(systemName: "plus.rectangle")
-                                    .foregroundColor(.blue)
-                                    .font(.largeTitle)
-                            }
-                            .padding()
+                        Button("Reset") {
+                            WaterService().getRid()
+                            self.response = WaterService().getWaterNon()
+
                         }
-                        if caffeineAdd > 0 {
-                            Button(action: {
-                                addCaf()
-                            }, label: {
+         
+                    
+                        Text("GetThirsty").font(.custom("DancingScript-Regular", size: 46)).foregroundColor(Color.white)
+                        Spacer()
+                        
+                        VStack {
+                            HStack {
+                                Text("Add Caffeine:")
+                                Text("\(caffeineAdd)")
+                                    .font(.custom("Righteous-Regular", size: 50))
+                                    .foregroundColor(Color(red: 0.4, green: 0.26, blue: 0.13))
+                                Text("mg")
+
+                            }
+                            .foregroundColor(Color.white)
+                            .font(.custom("Righteous-Regular", size: 35))
+                                .fontWeight(.bold)
+
+                            
+                            HStack {
                                 HStack {
-                                    Text("Add").font(.custom("Righteous-Regular", size: 35))
-                                    Image(systemName: "plus.app.fill")
-                                        .foregroundColor(Color.blue)
-                                        .font(.largeTitle)
+                                    Button(action: {
+                                        if(caffeineAdd > 10) {
+                                            caffeineAdd -= 10
+                                        }
+                                        
+                                    }) {
+                                        VStack {
+                                            Text("-10")
+                                            Image(systemName: "minus.rectangle")
+                                                .foregroundColor(.blue)
+                                                .font(.largeTitle)
+                                        }
+
+                                    }
+                                    .padding()
+                                    Button(action: {
+                                        if(caffeineAdd > 0) {
+                                            caffeineAdd -= 1
+                                        }
+                                        
+                                    }) {
+                                        VStack {
+                                            Text("-1")
+                                            Image(systemName: "minus.rectangle")
+                                                .foregroundColor(.blue)
+                                                .font(.largeTitle)
+                                        }
+                                    }
+                                    .padding()
 
                                 }
 
-                                
-                            })
-                        }
+                                HStack {
+                                    Button(action: {
+                                        caffeineAdd += 1
+                                    }) {
+                                        VStack {
+                                            Text("+1")
+                                            Image(systemName: "plus.rectangle")
+                                                .foregroundColor(.blue)
+                                                .font(.largeTitle)
+                                        }
+                                    }
+                                    .padding()
+                                    Button(action: {
+                                        caffeineAdd += 10
+                                    }) {
+                                        VStack {
+                                            Text("+10")
+                                            Image(systemName: "plus.rectangle")
+                                                .foregroundColor(.blue)
+                                                .font(.largeTitle)
+                                        }
 
-                    }
-                    VStack {
-                        HStack {
-                            Text("Add Water: ")
-                            Text("\(waterAdd)").foregroundColor(Color.blue)
-                                
-                            Text("Oz")
-                        }
-                        .font(.custom("Righteous-Regular", size: 35))
-                            .fontWeight(.bold)
-                            .padding()
-                        
-                        HStack {
-                            Button(action: {
-                                
-                                waterAdd -= 1
-                            }) {
-                                Image(systemName: "minus.rectangle")
-                                    .foregroundColor(.blue)
-                                    .font(.largeTitle)
-                            }
-                            .padding()
-                            
-                            Button(action: {
-                                waterAdd += 1
-                            }) {
-                                Image(systemName: "plus.rectangle")
-                                    .foregroundColor(.blue)
-                                    .font(.largeTitle)
-                            }
-                            .padding()
+                                    }
+                                    .padding()
+                                }
 
-                        }
-                        HStack {
-                            if waterAdd > 0 {
+                            }
+                            if caffeineAdd > 0 {
                                 Button(action: {
-                                    addWater()
+                                    addCaf()
                                 }, label: {
                                     HStack {
-                                        Text("Add").font(.custom("Righteous-Regular", size: 35))
+                                        Text("Add").font(.custom("Righteous-Regular", size: 25))
                                         Image(systemName: "plus.app.fill")
-                                            .foregroundColor(Color.blue)
+                                            .foregroundColor(Color.white)
                                             .font(.largeTitle)
 
                                     }
 
                                     
                                 })
-                               
-            
                             }
+
                         }
-                    }
-                    Spacer()
-                    if self.isUpdating {
-                        Text("Updating")
-                    } else {
-                        VStack {
-              
-                            Text("Drink Up")
-                            HStack {
-                                Text("Only")
-                                Text(String((response.totalDailyWaterOz ?? 0) - (response.actualWtOz ?? 0)) ).foregroundColor(Color.blue)
-                                Text("Oz")
-                                Text("Left")
-                            }
-                            
-                            
-                        }.font(.custom("Righteous-Regular", size: 46))
                         Spacer()
+                        VStack {
+                            HStack {
+                                Text("Add Water: ")
+                                Text("\(waterAdd)")
+                                    .font(.custom("Righteous-Regular", size: 50))
+                                    .foregroundColor(Color.blue)
+                                    
+                                Text("Oz")
+                            }
+                            .foregroundColor(Color.white)
+                            .font(.custom("Righteous-Regular", size: 35))
+                                .fontWeight(.bold)
+                         
+                            
+                            HStack {
+                                Button(action: {
+                                    if(waterAdd > 10) {
+                                        waterAdd -= 10
+                                    }
+                                    
+                                }) {
+                                    VStack {
+                                        Text("-10")
+                                        Image(systemName: "minus.rectangle")
+                                            .foregroundColor(.blue)
+                                            .font(.largeTitle)
+                                    }
+
+                                }
+                                .padding()
+                                Button(action: {
+                                    if(waterAdd > 0) {
+                                        waterAdd -= 1
+                                    }
+                                    
+                                }) {
+                                    VStack {
+                                        Text("-1")
+                                        Image(systemName: "minus.rectangle")
+                                           
+                                            .foregroundColor(.blue)
+                                            .font(.largeTitle)
+                                    }
+                                }
+                                .padding()
+              
+
+  
+                                Button(action: {
+
+                                    if (response.totalDailyWaterOz ?? 0) - ((response.actualWtOz ?? 0) + waterAdd + 10) >= 0 {
+                                        waterAdd += 10
+                                    }
+                                   
+                                    
+                                    
+                                    
+                                }) {
+                                    VStack {
+                                        Text("+10")
+                                        Image(systemName: "plus.rectangle")
+                                            .foregroundColor(.blue)
+                                            .font(.largeTitle)
+                                    }
+
+                                }
+                                .padding()
+                                Button(action: {
+                                    
+                                    if (response.totalDailyWaterOz ?? 0) - ((response.actualWtOz ?? 0) + waterAdd + 1) >= 0 {
+                                        waterAdd += 1
+                                    }
+                                   
+                                    
+                                    
+                                }) {
+                                    VStack {
+                                        Text("+1")
+                                        Image(systemName: "plus.rectangle")
+                                            .foregroundColor(.blue)
+                                            .font(.largeTitle)
+                                    }
+                                }
+                                .padding()
+
+                            }
+                            if waterAdd > 0 && (response.totalDailyWaterOz ?? 0) - (response.actualWtOz ?? 0) > 0 {
+                                Button(action: {
+                                    addWater()
+                                }, label: {
+                                    HStack {
+                                        Text("Add").font(.custom("Righteous-Regular", size: 25))
+                                        Image(systemName: "plus.app.fill")
+                                            .foregroundColor(Color.white)
+                                            .font(.largeTitle)
+
+                                    }
+
+                                    
+                                })
+                            }
+                            Spacer()
+                        }
+                    
+                    }
+                    .frame(width: 900.0, height: 580.0)
+                    .background(Color.black)
+
+                    Spacer()
+                    
+
+
+                    
+
+                    if(response.totalDailyWaterOz ?? 0) - (response.actualWtOz ?? 0) > 0 {
+                        HStack {
+                            Spacer()
+                            VStack {
+                                Text("Water(oz)")
+                                Text(String((response.actualWtOz ?? 0)))
+                            }.font(.custom("Righteous-Regular", size: 16))
+                            VStack {
+
+                                Text("Drink Up")
+                                HStack {
+                                    Spacer()
+                                    Text("Only")
+                                    Text(String((response.totalDailyWaterOz ?? 0) - (response.actualWtOz ?? 0)) ).foregroundColor(Color.white)
+                                    Text("oz")
+                                    Text("Left")
+                                    Spacer()
+                                }
+                                
+                                
+                            }
+                            VStack {
+                                Text("Caffeine(mg)")
+                                Text(String((response.caffeineIntake ?? 0)))
+                            }.font(.custom("Righteous-Regular", size: 16))
+                            
+                            Spacer()
+                        
+
+                    }
+                        .background(
+                        LinearGradient(
+
+                            gradient: Gradient(colors: [Color(red: 0.4627, green: 0.8392, blue: 1.0), Color.blue]),
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+
+
+                        )
+                    )
+                        .frame(alignment: .center)
+                    .font(.custom("Righteous-Regular", size: 26))
+                        
+                    
+                    } else {
+                        
+                        VStack {
+                            Spacer()
+                            Text("Complete")
+                                .foregroundColor(Color(.sRGB, red: 1.0, green: 0.84, blue: 0.0, opacity: 1.0))
+                            HStack {
+                                Spacer()
+                                Text("You Thirsty")
+                                    .font(.custom("RubikWetPaint-Regular", size: 26))
+                                    .foregroundColor(Color.blue)
+                                
+                                
+                                Spacer()
+                            }
+                            Spacer()
+                            
+                            
+                        }
+                        .padding()
+                        .background(
+                            LinearGradient(
+                                
+                                gradient: Gradient(colors: [Color.green, Color(.sRGB, red: 0.56, green: 0.93, blue: 0.56, opacity: 1.0)]),
+                                startPoint: .topLeading,
+                                endPoint: .bottomTrailing
+                                
+                                
+                            )
+                        )
+                        .font(.custom("Righteous-Regular", size: 46))
+                        
+                        
                     }
 
                     
@@ -259,27 +430,31 @@ struct ContentView: View {
                 
                 }
             }
-            
+                
 
 
-        }.onAppear {
+        }
+        
+        .onAppear {
             if compareDates(date1: self.intake) {
                 self.response.caffeineIntake = 0
                 self.response.actualWtOz = 0
                 self.intake = Date()
                 self.response.lastIntake = Date()
             }
+     
             
             DispatchQueue.main.async {
                 WaterService().updateWater(water: self.response)
                 updateData()
             }
         }
+        
     
 
     }
     
-    public func backButton() {
+    func backButton() {
         DispatchQueue.main.async {
             updateData()
         }
@@ -287,10 +462,24 @@ struct ContentView: View {
         
     }
     
-    public func addInfo() {
+    func CheckingDate() {
+        if compareDates(date1: self.intake) {
+            self.response.caffeineIntake = 0
+            self.response.actualWtOz = 0
+            self.intake = Date()
+            self.response.lastIntake = Date()
+        }
+        
+        DispatchQueue.main.async {
+            WaterService().updateWater(water: self.response)
+            updateData()
+        }
+    }
+    
+    func addInfo() {
         let water : Water = Water(totalDailyWaterOz: WaterService().calculateDailyWaterIntake(height: self.height, weight: self.weight, age: self.age, gender: self.gender, caffeineIntake: 0), caffeineIntake: 0,
                                   actualWtOz: 0,
-                                  lastIntake: yesterday(),
+                                  lastIntake: Date(),
                                   isPremium: false,
                                   height: self.height,
                                   weight: self.weight,
@@ -304,12 +493,8 @@ struct ContentView: View {
         self.response = WaterService().getWaterNon()
         
     }
-    func yesterday() -> Date {
-        let yesterdayDate = Calendar.current.date(byAdding: .day, value: -1, to: Date())!
-        return yesterdayDate
-    }
-    
-    public func addCaf() {
+
+    func addCaf() {
         let age : Int = self.response.age ?? 0
         let height : Int = self.response.height ?? 0
         let weight : Int = self.response.weight ?? 0
@@ -334,20 +519,23 @@ struct ContentView: View {
         self.caffeineAdd = 0
 
     }
-    public func addWater() {
+    func addWater() {
+        let actuWater : Int = (self.response.actualWtOz ?? 0) + waterAdd
+        
         self.isUpdating = true
         let age : Int = self.response.age ?? 0
         let height : Int = self.response.height ?? 0
         let weight : Int = self.response.weight ?? 0
 
+
         let caffeineIntake : Int = self.response.caffeineIntake ?? 0
         let data : Int = WaterService().calculateDailyWaterIntake(height: height, weight: weight, age: age, gender: gender, caffeineIntake: (caffeineIntake))
 
+
         
         let water : Water = Water(totalDailyWaterOz: data,
-                                  
                                   caffeineIntake: (self.response.caffeineIntake ?? 0),
-                                  actualWtOz: (self.response.actualWtOz ?? 0) + waterAdd,
+                                  actualWtOz: actuWater,
                                   lastIntake: self.intake,
                                   isPremium: false,
                                   height: self.response.height,
@@ -356,8 +544,10 @@ struct ContentView: View {
                                   gender: self.response.gender,
                                   userLive: true)
         DispatchQueue.main.async {
+
             WaterService().updateWater(water: water)
-            self.response = WaterService().getWaterNon()
+            CheckingDate()
+            updateData()
         }
         self.waterAdd = 0
         self.plusImg = "plus.app.fill"
@@ -365,7 +555,7 @@ struct ContentView: View {
     }
     
     
-    public func updateData() {
+    func updateData() {
         self.isUpdating = true
         self.response = WaterService().getWaterNon()
         self.isUpdating = false
@@ -402,6 +592,9 @@ struct ContentView: View {
             // date2 is later in the month than date1
             return true
         }
+    }
+    func getWaterLeft() -> Int {
+        return (response.totalDailyWaterOz ?? 0) - (response.actualWtOz ?? 0)
     }
 }
 

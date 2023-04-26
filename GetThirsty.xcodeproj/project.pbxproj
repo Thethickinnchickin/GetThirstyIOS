@@ -14,6 +14,7 @@
 		8D617DC629EFDD510028DFCC /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D617DC529EFDD510028DFCC /* Token.swift */; };
 		8D617DDB29F232210028DFCC /* Righteous-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D617DDA29F232200028DFCC /* Righteous-Regular.ttf */; };
 		8D617DDF29F24B940028DFCC /* DancingScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D617DDE29F24B940028DFCC /* DancingScript-Regular.ttf */; };
+		8D617DE129F75B610028DFCC /* RubikWetPaint-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D617DE029F75B610028DFCC /* RubikWetPaint-Regular.ttf */; };
 		8DBFFFB829E8E6A900ABACE2 /* GetThirstyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBFFFB729E8E6A900ABACE2 /* GetThirstyApp.swift */; };
 		8DBFFFBA29E8E6A900ABACE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBFFFB929E8E6A900ABACE2 /* ContentView.swift */; };
 		8DBFFFBC29E8E6AC00ABACE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DBFFFBB29E8E6AC00ABACE2 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		8D617DCD29F223F80028DFCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D617DDA29F232200028DFCC /* Righteous-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Righteous-Regular.ttf"; sourceTree = "<group>"; };
 		8D617DDE29F24B940028DFCC /* DancingScript-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-Regular.ttf"; sourceTree = "<group>"; };
+		8D617DE029F75B610028DFCC /* RubikWetPaint-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RubikWetPaint-Regular.ttf"; sourceTree = "<group>"; };
 		8DBFFFB429E8E6A900ABACE2 /* GetThirsty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetThirsty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBFFFB729E8E6A900ABACE2 /* GetThirstyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetThirstyApp.swift; sourceTree = "<group>"; };
 		8DBFFFB929E8E6A900ABACE2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		8DBFFFB629E8E6A900ABACE2 /* GetThirsty */ = {
 			isa = PBXGroup;
 			children = (
+				8D617DE029F75B610028DFCC /* RubikWetPaint-Regular.ttf */,
 				8D617DDE29F24B940028DFCC /* DancingScript-Regular.ttf */,
 				8D617DDA29F232200028DFCC /* Righteous-Regular.ttf */,
 				8D617DCD29F223F80028DFCC /* Info.plist */,
@@ -329,6 +332,7 @@
 				8DBFFFBF29E8E6AC00ABACE2 /* Preview Assets.xcassets in Resources */,
 				8D617DDB29F232210028DFCC /* Righteous-Regular.ttf in Resources */,
 				8DBFFFBC29E8E6AC00ABACE2 /* Assets.xcassets in Resources */,
+				8D617DE129F75B610028DFCC /* RubikWetPaint-Regular.ttf in Resources */,
 				8D617DDF29F24B940028DFCC /* DancingScript-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

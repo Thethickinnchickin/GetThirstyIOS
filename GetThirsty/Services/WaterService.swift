@@ -112,7 +112,6 @@ class WaterService {
     func updateWater(water: Water) {
         let encoder = JSONEncoder()
         let waterEn = try! encoder.encode(water)
-        print(waterEn)
         try! UserDefaults.standard.set(waterEn, forKey: "water")
 
     }
