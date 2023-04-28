@@ -28,73 +28,98 @@ struct WaterResponse: Codable {
 }
 
 class WaterService {
-    func getWater(token: String, completion:@escaping (Water) -> ()) {
-        let url = URL(string: "http://localhost:3000/water")!
-        var request = URLRequest(url: url)
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
-
-        request.httpMethod = "GET"
-        request.setValue( "Bearer \(token)", forHTTPHeaderField: "Authorization")
-                
-
-
-
-
-        
-        
-        
-
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard
-                let data = data,
-                let response = response as? HTTPURLResponse,
-                error == nil
-            else {                                                               // check for fundamental networking error
-                print("error", error ?? URLError(.badServerResponse))
-                return
-            }
-            
-            guard (200 ... 299) ~= response.statusCode else {                    // check for http errors
-                print("statusCode should be 2xx, but is \(response.statusCode)")
-                print("response = \(response)")
-                return
-            }
-            
-            // do whatever you want with the `data`, e.g.:
-            
-            do {
-                let response = try JSONDecoder().decode(WaterResponse.self, from: data)
-                completion(response.water)
-
-
-            } catch {
-                print(error) // parsing error
-                
-                if let responseString = String(data: data, encoding: .utf8) {
-                    print("responseString = \(responseString)")
-                } else {
-                    print("unable to parse response as string")
-                }
-            }
-        }
-        
-        
-    task.resume()
-    }
-    
-    func getWaterNon() -> Water {
+//    func getWater(token: String, completion:@escaping (Water) -> ()) {
+//        let url = URL(string: "http://localhost:3000/water")!
+//        var request = URLRequest(url: url)
+//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//        request.setValue("application/json", forHTTPHeaderField: "Accept")
+//
+//        request.httpMethod = "GET"
+//        request.setValue( "Bearer \(token)", forHTTPHeaderField: "Authorization")
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+//            guard
+//                let data = data,
+//                let response = response as? HTTPURLResponse,
+//                error == nil
+//            else {                                                               // check for fundamental networking error
+//                print("error", error ?? URLError(.badServerResponse))
+//                return
+//            }
+//
+//            guard (200 ... 299) ~= response.statusCode else {                    // check for http errors
+//                print("statusCode should be 2xx, but is \(response.statusCode)")
+//                print("response = \(response)")
+//                return
+//            }
+//
+//            // do whatever you want with the `data`, e.g.:
+//
+//            do {
+//                let response = try JSONDecoder().decode(WaterResponse.self, from: data)
+//                completion(response.water)
+//
+//
+//            } catch {
+//                print(error) // parsing error
+//
+//                if let responseString = String(data: data, encoding: .utf8) {
+//                    print("responseString = \(responseString)")
+//                } else {
+//                    print("unable to parse response as string")
+//                }
+//            }
+//        }
+//
+//
+//    task.resume()
+//    }
+//
+    func getWaterNon() -> Water{
         let decoder  = JSONDecoder()
         let water = UserDefaults.standard.object(forKey: "water")
         if(water != nil) {
-            return try! decoder.decode(Water.self, from: UserDefaults.standard.object(forKey: "water") as! Data)
+            var thing : Water  = try! decoder.decode(Water.self, from: UserDefaults.standard.object(forKey: "water") as! Data)
+            print(compareDates(date1: thing.lastIntake!))
+            if !compareDates(date1: thing.lastIntake!) {
+                DispatchQueue.main.async {
+                    self.updateWater(water: thing)
+                    
+                }
+                return thing
+            } else {
+
+                DispatchQueue.main.async {
+                    thing.lastIntake = Date()
+                    thing.actualWtOz = 0
+                    thing.caffeineIntake = 0
+                    self.updateWater(water: thing)
+                }
+                print(thing)
+                return thing
+
+            }
         } else {
+    
             return Water(userLive: false)
+            
+            
         }
 
         
 
     }
+    
+
+    
     func getLastIntake() -> Date {
         let decoder  = JSONDecoder()
         let water = UserDefaults.standard.object(forKey: "water")
@@ -122,6 +147,41 @@ class WaterService {
             
         }
         print(UserDefaults.standard.object(forKey: "water") as Any)
+    }
+    
+    func todayString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        return dateFormatter.string(from: Date())
+    }
+    func dateString(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        return dateFormatter.string(from: date)
+    }
+    
+    //returns false if date is later than today
+    //returns true if date os earlier
+    func compareDates(date1: Date) -> Bool {
+        let calendar = Calendar.current
+        let date2 = Date()
+
+        let day1 = calendar.component(.day, from: date1)
+        let day2 = calendar.component(.day, from: date2)
+
+        if day1 == day2 {
+            // the two dates have the same day
+            print("SAMEEEE")
+           return false
+        } else if day1 > day2 {
+            // date1 is later in the month than date2
+            return false
+        } else {
+            // date2 is later in the month than date1
+            return true
+        }
     }
     
     func calculateDailyWaterIntake(height: Int, weight: Int, age: Int, gender: String, caffeineIntake: Int) -> Int {

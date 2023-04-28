@@ -56,7 +56,7 @@ struct ContentView: View {
                         // Top bar with the date
                         HStack {
                             Spacer()
-                            Text(todayString())
+                            Text(WaterService().todayString())
                                 .font(.custom("Righteous-Regular", size: 46))
                             Spacer()
                         }
@@ -89,7 +89,7 @@ struct ContentView: View {
                                 Text("Add Caffeine:")
                                 Text("\(caffeineAdd)")
                                     .font(.custom("Righteous-Regular", size: 50))
-                                    .foregroundColor(Color(red: 0.4, green: 0.26, blue: 0.13))
+                                    .foregroundColor(Color(red: 0.91, green: 0.69, blue: 0.51))
                                 Text("mg")
 
                             }
@@ -101,7 +101,7 @@ struct ContentView: View {
                             HStack {
                                 HStack {
                                     Button(action: {
-                                        if(caffeineAdd > 10) {
+                                        if(caffeineAdd >= 10) {
                                             caffeineAdd -= 10
                                         }
                                         
@@ -109,9 +109,10 @@ struct ContentView: View {
                                         VStack {
                                             Text("-10")
                                             Image(systemName: "minus.rectangle")
-                                                .foregroundColor(.blue)
+                                                
                                                 .font(.largeTitle)
                                         }
+                                        .foregroundColor(.red)
 
                                     }
                                     .padding()
@@ -124,9 +125,9 @@ struct ContentView: View {
                                         VStack {
                                             Text("-1")
                                             Image(systemName: "minus.rectangle")
-                                                .foregroundColor(.blue)
                                                 .font(.largeTitle)
                                         }
+                                        .foregroundColor(.red)
                                     }
                                     .padding()
 
@@ -165,11 +166,11 @@ struct ContentView: View {
                                 }, label: {
                                     HStack {
                                         Text("Add").font(.custom("Righteous-Regular", size: 25))
-                                        Image(systemName: "plus.app.fill")
-                                            .foregroundColor(Color.white)
+                                        Image(systemName: "cup.and.saucer.fill")
+
                                             .font(.largeTitle)
 
-                                    }
+                                    }.foregroundColor(Color(red: 0.91, green: 0.69, blue: 0.51))
 
                                     
                                 })
@@ -193,7 +194,7 @@ struct ContentView: View {
                             
                             HStack {
                                 Button(action: {
-                                    if(waterAdd > 10) {
+                                    if(waterAdd >= 10) {
                                         waterAdd -= 10
                                     }
                                     
@@ -201,9 +202,8 @@ struct ContentView: View {
                                     VStack {
                                         Text("-10")
                                         Image(systemName: "minus.rectangle")
-                                            .foregroundColor(.blue)
                                             .font(.largeTitle)
-                                    }
+                                    } .foregroundColor(.red)
 
                                 }
                                 .padding()
@@ -216,14 +216,28 @@ struct ContentView: View {
                                     VStack {
                                         Text("-1")
                                         Image(systemName: "minus.rectangle")
-                                           
+                                            .font(.largeTitle)
+                                    } .foregroundColor(.red)
+                                }
+                                .padding()
+              
+                                Button(action: {
+                                    
+                                    if (response.totalDailyWaterOz ?? 0) - ((response.actualWtOz ?? 0) + waterAdd + 1) >= 0 {
+                                        waterAdd += 1
+                                    }
+                                   
+                                    
+                                    
+                                }) {
+                                    VStack {
+                                        Text("+1")
+                                        Image(systemName: "plus.rectangle")
                                             .foregroundColor(.blue)
                                             .font(.largeTitle)
                                     }
                                 }
                                 .padding()
-              
-
   
                                 Button(action: {
 
@@ -244,23 +258,7 @@ struct ContentView: View {
 
                                 }
                                 .padding()
-                                Button(action: {
-                                    
-                                    if (response.totalDailyWaterOz ?? 0) - ((response.actualWtOz ?? 0) + waterAdd + 1) >= 0 {
-                                        waterAdd += 1
-                                    }
-                                   
-                                    
-                                    
-                                }) {
-                                    VStack {
-                                        Text("+1")
-                                        Image(systemName: "plus.rectangle")
-                                            .foregroundColor(.blue)
-                                            .font(.largeTitle)
-                                    }
-                                }
-                                .padding()
+
 
                             }
                             if waterAdd > 0 && (response.totalDailyWaterOz ?? 0) - (response.actualWtOz ?? 0) > 0 {
@@ -269,11 +267,11 @@ struct ContentView: View {
                                 }, label: {
                                     HStack {
                                         Text("Add").font(.custom("Righteous-Regular", size: 25))
-                                        Image(systemName: "plus.app.fill")
-                                            .foregroundColor(Color.white)
+                                        Image(systemName: "drop.fill")
+                                            
                                             .font(.largeTitle)
 
-                                    }
+                                    }.foregroundColor(Color.blue)
 
                                     
                                 })
@@ -373,20 +371,24 @@ struct ContentView: View {
                     
                 } else {
                     VStack {
+                        Text("GetThirsty")
+                            .font(.custom("DancingScript-Regular", size: 46))
+                            .foregroundColor(Color.blue)
+                            .padding()
                             Text("Enter your information:")
                                 .font(.headline)
                                 .padding(.bottom, 20)
                             
                             VStack(alignment: .leading, spacing: 8) {
                                 HStack {
-                                    Text("Height (in cm):")
+                                    Text("Height (in inches):")
                                     TextField("Enter height", value: $height, formatter: NumberFormatter())
                                         .textFieldStyle(RoundedBorderTextFieldStyle())
                                         .keyboardType(.numberPad)
                                 }
                                 
                                 HStack {
-                                    Text("Weight (in kg):")
+                                    Text("Weight (in lbs):")
                                     TextField("Enter weight", value: $weight, formatter: NumberFormatter())
                                         .textFieldStyle(RoundedBorderTextFieldStyle())
                                         .keyboardType(.numberPad)
@@ -429,6 +431,7 @@ struct ContentView: View {
                         
                 
                 }
+    
             }
                 
 
@@ -436,13 +439,13 @@ struct ContentView: View {
         }
         
         .onAppear {
-            if compareDates(date1: self.intake) {
+
+            if WaterService().compareDates(date1: self.intake) {
                 self.response.caffeineIntake = 0
                 self.response.actualWtOz = 0
                 self.intake = Date()
                 self.response.lastIntake = Date()
             }
-     
             
             DispatchQueue.main.async {
                 WaterService().updateWater(water: self.response)
@@ -454,16 +457,10 @@ struct ContentView: View {
 
     }
     
-    func backButton() {
-        DispatchQueue.main.async {
-            updateData()
-        }
 
-        
-    }
     
     func CheckingDate() {
-        if compareDates(date1: self.intake) {
+        if WaterService().compareDates(date1: self.intake) {
             self.response.caffeineIntake = 0
             self.response.actualWtOz = 0
             self.intake = Date()
@@ -563,36 +560,7 @@ struct ContentView: View {
     
 
     
-    func todayString() -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
-        return dateFormatter.string(from: Date())
-    }
-    func dateString(date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
-        return dateFormatter.string(from: date)
-    }
-    func compareDates(date1: Date) -> Bool {
-        let calendar = Calendar.current
-        let date2 = Date()
 
-        let day1 = calendar.component(.day, from: date1)
-        let day2 = calendar.component(.day, from: date2)
-
-        if day1 == day2 {
-            // the two dates have the same day
-           return false
-        } else if day1 > day2 {
-            // date1 is later in the month than date2
-            return false
-        } else {
-            // date2 is later in the month than date1
-            return true
-        }
-    }
     func getWaterLeft() -> Int {
         return (response.totalDailyWaterOz ?? 0) - (response.actualWtOz ?? 0)
     }
