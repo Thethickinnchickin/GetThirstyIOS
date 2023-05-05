@@ -5,7 +5,9 @@
 //  Created by Matt Reiley on 4/17/23.
 //
 
+
 import Foundation
+import UserNotifications
 
 struct Water: Codable {
     var totalDailyWaterOz: Int?
@@ -28,98 +30,30 @@ struct WaterResponse: Codable {
 }
 
 class WaterService {
-//    func getWater(token: String, completion:@escaping (Water) -> ()) {
-//        let url = URL(string: "http://localhost:3000/water")!
-//        var request = URLRequest(url: url)
-//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-//        request.setValue("application/json", forHTTPHeaderField: "Accept")
-//
-//        request.httpMethod = "GET"
-//        request.setValue( "Bearer \(token)", forHTTPHeaderField: "Authorization")
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-//            guard
-//                let data = data,
-//                let response = response as? HTTPURLResponse,
-//                error == nil
-//            else {                                                               // check for fundamental networking error
-//                print("error", error ?? URLError(.badServerResponse))
-//                return
-//            }
-//
-//            guard (200 ... 299) ~= response.statusCode else {                    // check for http errors
-//                print("statusCode should be 2xx, but is \(response.statusCode)")
-//                print("response = \(response)")
-//                return
-//            }
-//
-//            // do whatever you want with the `data`, e.g.:
-//
-//            do {
-//                let response = try JSONDecoder().decode(WaterResponse.self, from: data)
-//                completion(response.water)
-//
-//
-//            } catch {
-//                print(error) // parsing error
-//
-//                if let responseString = String(data: data, encoding: .utf8) {
-//                    print("responseString = \(responseString)")
-//                } else {
-//                    print("unable to parse response as string")
-//                }
-//            }
-//        }
-//
-//
-//    task.resume()
-//    }
-//
-    func getWaterNon() -> Water{
+    func getWater() -> Water{
         let decoder  = JSONDecoder()
         let water = UserDefaults.standard.object(forKey: "water")
         if(water != nil) {
             var thing : Water  = try! decoder.decode(Water.self, from: UserDefaults.standard.object(forKey: "water") as! Data)
-            print(compareDates(date1: thing.lastIntake!))
             if !compareDates(date1: thing.lastIntake!) {
                 DispatchQueue.main.async {
                     self.updateWater(water: thing)
-                    
                 }
                 return thing
             } else {
-
                 DispatchQueue.main.async {
                     thing.lastIntake = Date()
                     thing.actualWtOz = 0
                     thing.caffeineIntake = 0
                     self.updateWater(water: thing)
                 }
-                print(thing)
                 return thing
-
             }
         } else {
-    
             return Water(userLive: false)
-            
-            
         }
-
-        
-
     }
-    
 
-    
     func getLastIntake() -> Date {
         let decoder  = JSONDecoder()
         let water = UserDefaults.standard.object(forKey: "water")
@@ -129,39 +63,61 @@ class WaterService {
         } else {
             return Date()
         }
-
-        
-
     }
-    
+
     func updateWater(water: Water) {
         let encoder = JSONEncoder()
         let waterEn = try! encoder.encode(water)
-        try! UserDefaults.standard.set(waterEn, forKey: "water")
-
-    }
-    func getRid() {
-        DispatchQueue.main.async {
-            UserDefaults.standard.removeObject(forKey:"water")
-            UserDefaults.standard.removeObject(forKey:"token")
-            
+        do {
+            UserDefaults.standard.set(waterEn, forKey: "water")
         }
-        print(UserDefaults.standard.object(forKey: "water") as Any)
+        
     }
-    
+
+    func updateNotif(notifON: Bool) {
+        let encoder = JSONEncoder()
+        let notifEn = try! encoder.encode(notifON)
+        do {
+            UserDefaults.standard.set(notifEn, forKey: "notif")
+        }
+    }
+
+    func getNotif() -> Bool {
+        let decoder  = JSONDecoder()
+        let water = UserDefaults.standard.bool(forKey: "notif")
+        
+        if(water) {
+            let notif = try! decoder.decode(Bool.self, from: UserDefaults.standard.object(forKey: "notif") as! Data)
+            return notif
+        } else {
+            return false
+        }
+    }
+
+    // Check if the user has authorized notifications or not
+    func checkNotificationAuthorization(completion: @escaping (Bool) -> Void) {
+        UNUserNotificationCenter.current().getNotificationSettings { settings in
+            let isAuthorized = settings.authorizationStatus == .authorized
+            completion(isAuthorized)
+        }
+    }
+
+    // Get today's date as string
     func todayString() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
         return dateFormatter.string(from: Date())
     }
+
+    // Get date as string
     func dateString(date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
         return dateFormatter.string(from: date)
     }
-    
+
     //returns false if date is later than today
     //returns true if date os earlier
     func compareDates(date1: Date) -> Bool {
@@ -235,5 +191,7 @@ class WaterService {
 
         return waterIntake
     }
+    
+    
 
 }

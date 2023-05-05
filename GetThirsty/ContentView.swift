@@ -6,13 +6,11 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct ContentView: View {
     @Environment(\.presentationMode) var presentationMode
-    
-    var decoder = JSONDecoder()
-    @State var response: Water = WaterService().getWaterNon()
-
+    @State var response: Water = WaterService().getWater()
     @State private var caffeineAdd = 0
     @State private var amountLeft = 0
     @State private var waterAdd = 0
@@ -20,69 +18,186 @@ struct ContentView: View {
     @State private var weight: Int = 0
     @State private var age: Int = 0
     @State private var gender: String = "Male"
-    @State private var isUpdating : Bool = false
     @State private var intake : Date = WaterService().getLastIntake()
+    @State private var notifsEn : Bool = false
     @State private var isLoading : Bool = true
     @State private var plusImg : String = "plus.app.fill"
-
-
-    
-    
-    @State var flag = false
+    @State private var isEditing: Bool = false
 
     var body: some View {
-
-
-
         NavigationStack {
             if isLoading {
                 Text("GetThirsty")
+                    // Set the custom font and size for the text
                     .font(.custom("DancingScript-Regular", size: 46))
-                    .foregroundColor(Color.blue)
+                    // Set the text color to a light blue color
+                    .foregroundColor(Color(red: 0.4627, green: 0.8392, blue: 1.0))
+                    // When the view appears, run an animation to set `isLoading` to false
                     .onAppear {
+                        // Define the easing animation with a duration of 2 seconds
                         let baseAnimation = Animation.easeIn(duration: 2.0)
-
-                    
-                    withAnimation(baseAnimation) {
-                        self.isLoading = false
+                        // Animate the `isLoading` variable with the easing animation
+                        withAnimation(baseAnimation) {
+                            self.isLoading = false
+                        }
                     }
 
-                }
             } else {
-  
-                
-                if response.userLive {
-                    VStack {
-                        // Top bar with the date
-                        HStack {
-                            Spacer()
+                VStack {
+
+                    // The HStack defines a layout with two VStacks and some buttons.
+                    HStack {
+                        
+                        // The first VStack has a HStack with a button that requests permission for notifications or displays a NavigationLink and a button.
+                        VStack{
+                            HStack {
+                                if notifsEn == false {
+                                    Button("Request Permission") {
+
+                                        // This block of code requests permission for notifications and prints "All set!" if successful or an error message if unsuccessful.
+                                        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                                            if success {
+                                                print("All set!")
+                                            } else if let error = error {
+                                                print(error.localizedDescription)
+                                            }
+                                        }
+                                    }
+                                } else {
+                                    Spacer()
+                                    NavigationLink(destination: Notif()) {
+                                        Image(systemName: "checkmark.seal")
+                                            .font(.title)
+                                    }
+                                    Button(action: {
+                                        self.isEditing = true
+                                    }) {
+                                        Image(systemName: "person.crop.circle")
+                                            .font(.title)
+                                    }
+                                }
+                            }
+                            
+                            // This block of code displays the current date as a string using a custom font.
                             Text(WaterService().todayString())
                                 .font(.custom("Righteous-Regular", size: 46))
-                            Spacer()
                         }
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(
-                            LinearGradient(
-                                gradient: Gradient(colors: [Color(red: 0.4627, green: 0.8392, blue: 1.0), Color.blue]),
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
-                        )
                         
-                       
-                    }
-                    VStack {
-                        
-                        Button("Reset") {
-                            WaterService().getRid()
-                            self.response = WaterService().getWaterNon()
-
-                        }
-         
-                    
-                        Text("GetThirsty").font(.custom("DancingScript-Regular", size: 46)).foregroundColor(Color.white)
                         Spacer()
+                    }
+                    
+                    // This block of code sets the text color to white and adds a gradient background to the HStack.
+                    .foregroundColor(.white)
+                    .background(
+                        LinearGradient(
+                            gradient: Gradient(colors: [Color(red: 0.4627, green: 0.8392, blue: 1.0), Color.blue]),
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+                }
+
+                
+                if !response.userLive || isEditing {
+
+                    VStack {
+                        HStack {
+                            Spacer()
+                            // Back button
+                            Button(action: {
+                                // Add any desired action here
+                                self.isEditing = false
+                            }) {
+                                HStack {
+                                    Image(systemName: "chevron.left")
+                                        .font(.system(size: 14, weight: .semibold))
+                                    Text("Back")
+                                        .font(.system(size: 14, weight: .semibold))
+                                    Spacer()
+                                }
+                            }
+                        }
+                        // App name
+                        Text("GetThirsty")
+                            .font(.custom("DancingScript-Regular", size: 46))
+                            .foregroundColor(Color.blue)
+                            .padding()
+                        // Form title
+                        Text("Enter your information:")
+                            .font(.headline)
+                            .padding(.bottom, 20)
+                        // Form fields
+                        VStack(alignment: .leading, spacing: 8) {
+                            HStack {
+                                Text("Height (in inches):")
+                                TextField("Enter height", value: $height, formatter: NumberFormatter())
+                                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                                    .keyboardType(.numberPad)
+                            }
+                            HStack {
+                                Text("Weight (in lbs):")
+                                TextField("Enter weight", value: $weight, formatter: NumberFormatter())
+                                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                                    .keyboardType(.numberPad)
+                            }
+                            HStack {
+                                Text("Age:")
+                                TextField("Enter age", value: $age, formatter: NumberFormatter())
+                                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                                    .keyboardType(.numberPad)
+                            }
+                            HStack {
+                                Text("Gender:")
+                                Picker(selection: $gender, label: Text("Gender")) {
+                                    Text("Male").tag("Male")
+                                    Text("Female").tag("Female")
+                                }
+                                .pickerStyle(SegmentedPickerStyle())
+                            }
+                        }
+                        .padding(.horizontal, 20)
+                        .padding(.bottom, 30)
+                        // Save button
+                        Button(action: {
+                            // Perform action after button is tapped
+                            DispatchQueue.main.async {
+                                addInfo()
+                            }
+                            print(self.response)
+
+                            self.isEditing = false
+                        }, label: {
+                            VStack {
+                                // Warning message
+                                Text("Warning: Your drinking data will be reset for the day if you change your info.")
+                                    .foregroundColor(.gray)
+                                    .font(.system(size: 12))
+                                // Save button label
+                                Text("Save")
+                                    .frame(width: 120, height: 40)
+                                    .foregroundColor(.white)
+                                    .background(Color.blue)
+                                    .cornerRadius(20)
+                            }
+                        })
+                        Spacer()
+                    }
+                    // Set the frame and background of the VStack
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.white)
+                    .edgesIgnoringSafeArea(.all)
+                    .navigationBarTitle("", displayMode: .inline)
+                    Spacer()
+
+                    
+                } else {
+
+                    
+                    VStack {
+                        // Top bar with the date
+                        Text("GetThirsty").font(.custom("DancingScript-Regular", size: 46)).foregroundColor(Color.blue)
+                            .padding()
+           
                         
                         VStack {
                             HStack {
@@ -93,7 +208,7 @@ struct ContentView: View {
                                 Text("mg")
 
                             }
-                            .foregroundColor(Color.white)
+                            .foregroundColor(Color.black)
                             .font(.custom("Righteous-Regular", size: 35))
                                 .fontWeight(.bold)
 
@@ -177,7 +292,7 @@ struct ContentView: View {
                             }
 
                         }
-                        Spacer()
+                        //Spacer()
                         VStack {
                             HStack {
                                 Text("Add Water: ")
@@ -187,7 +302,7 @@ struct ContentView: View {
                                     
                                 Text("Oz")
                             }
-                            .foregroundColor(Color.white)
+                            .foregroundColor(Color.black)
                             .font(.custom("Righteous-Regular", size: 35))
                                 .fontWeight(.bold)
                          
@@ -268,27 +383,24 @@ struct ContentView: View {
                                     HStack {
                                         Text("Add").font(.custom("Righteous-Regular", size: 25))
                                         Image(systemName: "drop.fill")
-                                            
                                             .font(.largeTitle)
 
-                                    }.foregroundColor(Color.blue)
+                                    }.foregroundColor(Color.blue).padding()
 
                                     
                                 })
                             }
-                            Spacer()
                         }
                     
                     }
-                    .frame(width: 900.0, height: 580.0)
-                    .background(Color.black)
-
+                    //Background
+                    .frame(width: 900.0)
+                    .background(Color.white)
+                    .onAppear {
+                        self.response = WaterService().getWater()
+                    }
                     Spacer()
                     
-
-
-                    
-
                     if(response.totalDailyWaterOz ?? 0) - (response.actualWtOz ?? 0) > 0 {
                         HStack {
                             Spacer()
@@ -321,12 +433,9 @@ struct ContentView: View {
                     }
                         .background(
                         LinearGradient(
-
                             gradient: Gradient(colors: [Color(red: 0.4627, green: 0.8392, blue: 1.0), Color.blue]),
                             startPoint: .topLeading,
                             endPoint: .bottomTrailing
-
-
                         )
                     )
                         .frame(alignment: .center)
@@ -335,8 +444,7 @@ struct ContentView: View {
                     
                     } else {
                         
-                        VStack {
-                            Spacer()
+                        VStack{
                             Text("Complete")
                                 .foregroundColor(Color(.sRGB, red: 1.0, green: 0.84, blue: 0.0, opacity: 1.0))
                             HStack {
@@ -348,10 +456,13 @@ struct ContentView: View {
                                 
                                 Spacer()
                             }
-                            Spacer()
-                            
-                            
                         }
+                            
+
+                           
+                            
+                            
+                        
                         .padding()
                         .background(
                             LinearGradient(
@@ -364,70 +475,34 @@ struct ContentView: View {
                             )
                         )
                         .font(.custom("Righteous-Regular", size: 46))
+                        .onAppear {
+                            // second
+                            let content = UNMutableNotificationContent()
+                            content.title = "Congrats you've completed your goal"
+                            content.subtitle = "Thirsty Hoe"
+                            content.sound = UNNotificationSound.default
+                            
+
+                            // show this notification five seconds from now
+                            //let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60 * 120, repeats: true)
+
+                            
+                            let date = Date(timeIntervalSinceNow: 60)
+                            let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: date), repeats: false)
+                            let request = UNNotificationRequest(identifier: "completed", content: content, trigger: trigger)
+
+                            // add our notification request
+                            UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+                            UNUserNotificationCenter.current().add(request)
+                        }
+                        .onDisappear{
+                            UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+                        }
+                        
                         
                         
                     }
-
-                    
-                } else {
-                    VStack {
-                        Text("GetThirsty")
-                            .font(.custom("DancingScript-Regular", size: 46))
-                            .foregroundColor(Color.blue)
-                            .padding()
-                            Text("Enter your information:")
-                                .font(.headline)
-                                .padding(.bottom, 20)
-                            
-                            VStack(alignment: .leading, spacing: 8) {
-                                HStack {
-                                    Text("Height (in inches):")
-                                    TextField("Enter height", value: $height, formatter: NumberFormatter())
-                                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                                        .keyboardType(.numberPad)
-                                }
-                                
-                                HStack {
-                                    Text("Weight (in lbs):")
-                                    TextField("Enter weight", value: $weight, formatter: NumberFormatter())
-                                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                                        .keyboardType(.numberPad)
-                                }
-                                
-                                HStack {
-                                    Text("Age:")
-                                    TextField("Enter age", value: $age, formatter: NumberFormatter())
-                                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                                        .keyboardType(.numberPad)
-                                }
-                                
-                                HStack {
-                                    Text("Gender:")
-                                    Picker(selection: $gender, label: Text("Gender")) {
-                                        Text("Male").tag("Male")
-                                        Text("Female").tag("Female")
-                                    }
-                                    .pickerStyle(SegmentedPickerStyle())
-                                }
-                            }
-                            .padding(.horizontal, 20)
-                            .padding(.bottom, 30)
-                            
-                            Button(action: {
-                                // Perform action after button is tapped
-                                addInfo()
-                            }, label: {
-                                Text("Save")
-                                    .frame(width: 120, height: 40)
-                                    .foregroundColor(.white)
-                                    .background(Color.blue)
-                                    .cornerRadius(20)
-                            })
-                        }
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .background(Color.white)
-                        .edgesIgnoringSafeArea(.all)
-                        .navigationBarTitle("", displayMode: .inline)
+        
                         
                 
                 }
@@ -450,12 +525,23 @@ struct ContentView: View {
             DispatchQueue.main.async {
                 WaterService().updateWater(water: self.response)
                 updateData()
+                WaterService().checkNotificationAuthorization { isAuthorized in
+                    if isAuthorized {
+                        // Notifications are authorized
+                        self.notifsEn = true
+                    } else {
+                        // Notifications are not authorized
+                        self.notifsEn = false
+                    }
+                }
             }
         }
         
     
 
     }
+    
+    
     
 
     
@@ -485,11 +571,14 @@ struct ContentView: View {
                                   userLive: true)
         DispatchQueue.main.async {
             WaterService().updateWater(water: water)
+            self.response = WaterService().getWater()
         }
 
-        self.response = WaterService().getWaterNon()
+        
         
     }
+    
+
 
     func addCaf() {
         let age : Int = self.response.age ?? 0
@@ -511,25 +600,18 @@ struct ContentView: View {
                                   userLive: true)
         DispatchQueue.main.async {
             WaterService().updateWater(water: water)
-            self.response = WaterService().getWaterNon()
+            self.response = WaterService().getWater()
         }
         self.caffeineAdd = 0
 
     }
     func addWater() {
         let actuWater : Int = (self.response.actualWtOz ?? 0) + waterAdd
-        
-        self.isUpdating = true
         let age : Int = self.response.age ?? 0
         let height : Int = self.response.height ?? 0
         let weight : Int = self.response.weight ?? 0
-
-
         let caffeineIntake : Int = self.response.caffeineIntake ?? 0
         let data : Int = WaterService().calculateDailyWaterIntake(height: height, weight: weight, age: age, gender: gender, caffeineIntake: (caffeineIntake))
-
-
-        
         let water : Water = Water(totalDailyWaterOz: data,
                                   caffeineIntake: (self.response.caffeineIntake ?? 0),
                                   actualWtOz: actuWater,
@@ -540,6 +622,7 @@ struct ContentView: View {
                                   age: self.response.age,
                                   gender: self.response.gender,
                                   userLive: true)
+        
         DispatchQueue.main.async {
 
             WaterService().updateWater(water: water)
@@ -548,14 +631,11 @@ struct ContentView: View {
         }
         self.waterAdd = 0
         self.plusImg = "plus.app.fill"
-        self.isUpdating = false
     }
     
     
     func updateData() {
-        self.isUpdating = true
-        self.response = WaterService().getWaterNon()
-        self.isUpdating = false
+        self.response = WaterService().getWater()
     }
     
 

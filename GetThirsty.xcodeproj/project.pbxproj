@@ -8,10 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0080D059876CF512FC848BD8 /* Pods_GetThirsty_GetThirstyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99BEBE8797C6187A6732BA39 /* Pods_GetThirsty_GetThirstyUITests.framework */; };
-		8D1C2F0529EA7728004A15D6 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1C2F0429EA7728004A15D6 /* UserService.swift */; };
-		8D617DC129ED0BFF0028DFCC /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D617DC029ED0BFF0028DFCC /* KeyChainService.swift */; };
 		8D617DC329EDB6510028DFCC /* WaterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D617DC229EDB6500028DFCC /* WaterService.swift */; };
-		8D617DC629EFDD510028DFCC /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D617DC529EFDD510028DFCC /* Token.swift */; };
 		8D617DDB29F232210028DFCC /* Righteous-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D617DDA29F232200028DFCC /* Righteous-Regular.ttf */; };
 		8D617DDF29F24B940028DFCC /* DancingScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D617DDE29F24B940028DFCC /* DancingScript-Regular.ttf */; };
 		8D617DE129F75B610028DFCC /* RubikWetPaint-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D617DE029F75B610028DFCC /* RubikWetPaint-Regular.ttf */; };
@@ -22,8 +19,7 @@
 		8DBFFFC929E8E6AC00ABACE2 /* GetThirstyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBFFFC829E8E6AC00ABACE2 /* GetThirstyTests.swift */; };
 		8DBFFFD329E8E6AC00ABACE2 /* GetThirstyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBFFFD229E8E6AC00ABACE2 /* GetThirstyUITests.swift */; };
 		8DBFFFD529E8E6AC00ABACE2 /* GetThirstyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBFFFD429E8E6AC00ABACE2 /* GetThirstyUITestsLaunchTests.swift */; };
-		8DBFFFE329EA17D500ABACE2 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBFFFE229EA17D500ABACE2 /* Login.swift */; };
-		8DBFFFE529EA1A7900ABACE2 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBFFFE429EA1A7900ABACE2 /* Register.swift */; };
+		8DEA814C2A04DAB500ED290D /* Notif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEA814B2A04DAB500ED290D /* Notif.swift */; };
 		8E28E587A72F1265E66692A3 /* Pods_GetThirstyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F72789DD38EFF4E3A837BF2C /* Pods_GetThirstyTests.framework */; };
 		D4B457FA9CEC0D86DD1BCC50 /* Pods_GetThirsty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A17EA8AE12724AE39E1425 /* Pods_GetThirsty.framework */; };
 /* End PBXBuildFile section */
@@ -49,10 +45,7 @@
 		626326256213B026E599C507 /* Pods-GetThirsty-GetThirstyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetThirsty-GetThirstyUITests.release.xcconfig"; path = "Target Support Files/Pods-GetThirsty-GetThirstyUITests/Pods-GetThirsty-GetThirstyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		686946C0158E31AD7FE8F2B7 /* Pods-GetThirsty-GetThirstyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetThirsty-GetThirstyUITests.debug.xcconfig"; path = "Target Support Files/Pods-GetThirsty-GetThirstyUITests/Pods-GetThirsty-GetThirstyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6AFF7F06C8D189C30F3C03F3 /* Pods-GetThirsty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetThirsty.debug.xcconfig"; path = "Target Support Files/Pods-GetThirsty/Pods-GetThirsty.debug.xcconfig"; sourceTree = "<group>"; };
-		8D1C2F0429EA7728004A15D6 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		8D617DC029ED0BFF0028DFCC /* KeyChainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
 		8D617DC229EDB6500028DFCC /* WaterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterService.swift; sourceTree = "<group>"; };
-		8D617DC529EFDD510028DFCC /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		8D617DCD29F223F80028DFCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D617DDA29F232200028DFCC /* Righteous-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Righteous-Regular.ttf"; sourceTree = "<group>"; };
 		8D617DDE29F24B940028DFCC /* DancingScript-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-Regular.ttf"; sourceTree = "<group>"; };
@@ -67,8 +60,7 @@
 		8DBFFFCE29E8E6AC00ABACE2 /* GetThirstyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetThirstyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBFFFD229E8E6AC00ABACE2 /* GetThirstyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetThirstyUITests.swift; sourceTree = "<group>"; };
 		8DBFFFD429E8E6AC00ABACE2 /* GetThirstyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetThirstyUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		8DBFFFE229EA17D500ABACE2 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		8DBFFFE429EA1A7900ABACE2 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		8DEA814B2A04DAB500ED290D /* Notif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notif.swift; sourceTree = "<group>"; };
 		99BEBE8797C6187A6732BA39 /* Pods_GetThirsty_GetThirstyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetThirsty_GetThirstyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6013E7C244593D20A3FAFB /* Pods-GetThirstyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetThirstyTests.debug.xcconfig"; path = "Target Support Files/Pods-GetThirstyTests/Pods-GetThirstyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4A501E81DA1DD3A50DA409B /* Pods-GetThirsty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetThirsty.release.xcconfig"; path = "Target Support Files/Pods-GetThirsty/Pods-GetThirsty.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,19 +110,9 @@
 		8D1C2F0329EA770C004A15D6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				8D1C2F0429EA7728004A15D6 /* UserService.swift */,
-				8D617DC029ED0BFF0028DFCC /* KeyChainService.swift */,
 				8D617DC229EDB6500028DFCC /* WaterService.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		8D617DC429EFDD3E0028DFCC /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				8D617DC529EFDD510028DFCC /* Token.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		8DBFFFAB29E8E6A900ABACE2 = {
@@ -162,7 +144,6 @@
 				8D617DDE29F24B940028DFCC /* DancingScript-Regular.ttf */,
 				8D617DDA29F232200028DFCC /* Righteous-Regular.ttf */,
 				8D617DCD29F223F80028DFCC /* Info.plist */,
-				8D617DC429EFDD3E0028DFCC /* Utils */,
 				8D1C2F0329EA770C004A15D6 /* Services */,
 				8DBFFFE129EA167300ABACE2 /* Views */,
 				8DBFFFB729E8E6A900ABACE2 /* GetThirstyApp.swift */,
@@ -201,8 +182,7 @@
 		8DBFFFE129EA167300ABACE2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8DBFFFE229EA17D500ABACE2 /* Login.swift */,
-				8DBFFFE429EA1A7900ABACE2 /* Register.swift */,
+				8DEA814B2A04DAB500ED290D /* Notif.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -461,14 +441,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DBFFFE329EA17D500ABACE2 /* Login.swift in Sources */,
-				8D1C2F0529EA7728004A15D6 /* UserService.swift in Sources */,
 				8DBFFFBA29E8E6A900ABACE2 /* ContentView.swift in Sources */,
-				8D617DC129ED0BFF0028DFCC /* KeyChainService.swift in Sources */,
-				8DBFFFE529EA1A7900ABACE2 /* Register.swift in Sources */,
 				8DBFFFB829E8E6A900ABACE2 /* GetThirstyApp.swift in Sources */,
+				8DEA814C2A04DAB500ED290D /* Notif.swift in Sources */,
 				8D617DC329EDB6510028DFCC /* WaterService.swift in Sources */,
-				8D617DC629EFDD510028DFCC /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
